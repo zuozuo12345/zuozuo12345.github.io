@@ -1,4 +1,4 @@
-<div align="center">
+<!-- <div align="center">
   <img alt="Logo" src="https://raw.githubusercontent.com/zuozuo12345/zuozuo12345.github.io/main/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
@@ -69,4 +69,4 @@ Yes, you can fork this repo. Please give proper credit by linking back to [britt
 | Light Slate    | ![#a8b2d1](https://via.placeholder.com/10/a8b2d1?text=+) `#a8b2d1` |
 | Lightest Slate | ![#ccd6f6](https://via.placeholder.com/10/ccd6f6?text=+) `#ccd6f6` |
 | White          | ![#e6f1ff](https://via.placeholder.com/10/e6f1ff?text=+) `#e6f1ff` |
-| Green          | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` |
+| Green          | ![#64ffda](https://via.placeholder.com/10/64ffda?text=+) `#64ffda` | -->
