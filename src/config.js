@@ -7,10 +7,11 @@ module.exports = {
   siteUrl: 'https://zuozuo12345.github.io/',
   siteLanguage: 'en_US',
   name: 'Zuo Yue',
-  location: 'Jamshedpur, India',
-  email: 'zuozuo12345@gmail.com',
+  location: 'Singapore, Singapore',
+  email: 'yue.zuo@u.nus.edu',
   github: 'https://github.com/zuozuo12345',
   twitterHandle: '@zuozuo12345',
+
   socialMedia: [
     {
       name: 'GitHub',
