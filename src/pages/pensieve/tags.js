@@ -6,6 +6,8 @@ import PropTypes from 'prop-types';
 import { Layout } from '@components';
 import styled from 'styled-components';
 import { theme, mixins, Main } from '@styles';
+import {LanguageProvider } from '@styles/LanguageContext';
+
 const { colors, fontSizes, fonts } = theme;
 
 const StyledTagsContainer = styled(Main)`
@@ -41,6 +43,7 @@ const TagsPage = ({
   },
   location,
 }) => (
+  <LanguageProvider>
   <Layout location={location}>
     <Helmet title={title} />
 
@@ -61,7 +64,8 @@ const TagsPage = ({
         ))}
       </ul>
     </StyledTagsContainer>
-  </Layout>
+    </Layout>
+   </LanguageProvider>
 );
 
 TagsPage.propTypes = {

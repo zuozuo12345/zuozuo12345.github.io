@@ -8,6 +8,8 @@ import { Layout } from '@components';
 import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
 import { theme, mixins, media, Main } from '@styles';
+import {LanguageProvider } from '@styles/LanguageContext';
+
 const { colors, fonts, fontSizes } = theme;
 
 const StyledMainContainer = styled(Main)``;
@@ -107,84 +109,86 @@ const ArchivePage = ({ location, data }) => {
   }, []);
 
   return (
-    <Layout location={location}>
-      <Helmet>
-        <title>Archive | Zuo Yue</title>
-        <link rel="canonical" href="https://zuozuo12345.github.io/archive" />
-      </Helmet>
+    <LanguageProvider>
+      <Layout location={location}>
+        <Helmet>
+          <title>Archive | Zuo Yue</title>
+          <link rel="canonical" href="https://zuozuo12345.github.io/archive" />
+        </Helmet>
 
-      <StyledMainContainer>
-        <header ref={revealTitle}>
-          <h1 className="big-title">Archive</h1>
-          <p className="subtitle">A big list of things I’ve worked on</p>
-        </header>
+        <StyledMainContainer>
+          <header ref={revealTitle}>
+            <h1 className="big-title">Archive</h1>
+            <p className="subtitle">A big list of things I’ve worked on</p>
+          </header>
 
-        <StyledTableContainer ref={revealTable}>
-          <StyledTable>
-            <thead>
-              <tr>
-                <th>Year</th>
-                <th>Title</th>
-                <th className="hide-on-mobile">Made at</th>
-                <th className="hide-on-mobile">Built with</th>
-                <th>Link</th>
-              </tr>
-            </thead>
-            <tbody>
-              {projects.length > 0 &&
-                projects.map(({ node }, i) => {
-                  const { date, github, external, title, tech, company } = node.frontmatter;
-                  return (
-                    <tr key={i} ref={el => (revealProjects.current[i] = el)}>
-                      <td className="overline year">{`${new Date(date).getFullYear()}`}</td>
+          <StyledTableContainer ref={revealTable}>
+            <StyledTable>
+              <thead>
+                <tr>
+                  <th>Year</th>
+                  <th>Title</th>
+                  <th className="hide-on-mobile">Made at</th>
+                  <th className="hide-on-mobile">Built with</th>
+                  <th>Link</th>
+                </tr>
+              </thead>
+              <tbody>
+                {projects.length > 0 &&
+                  projects.map(({ node }, i) => {
+                    const { date, github, external, title, tech, company } = node.frontmatter;
+                    return (
+                      <tr key={i} ref={el => (revealProjects.current[i] = el)}>
+                        <td className="overline year">{`${new Date(date).getFullYear()}`}</td>
 
-                      <td className="title">{title}</td>
+                        <td className="title">{title}</td>
 
-                      <td className="company hide-on-mobile">
-                        {company ? <span>{company}</span> : <span>—</span>}
-                      </td>
+                        <td className="company hide-on-mobile">
+                          {company ? <span>{company}</span> : <span>—</span>}
+                        </td>
 
-                      <td className="tech hide-on-mobile">
-                        {tech.length > 0 &&
-                          tech.map((item, i) => (
-                            <span key={i}>
-                              {item}
-                              {''}
-                              {i !== tech.length - 1 && <span className="separator">&middot;</span>}
-                            </span>
-                          ))}
-                      </td>
+                        <td className="tech hide-on-mobile">
+                          {tech.length > 0 &&
+                            tech.map((item, i) => (
+                              <span key={i}>
+                                {item}
+                                {''}
+                                {i !== tech.length - 1 && <span className="separator">&middot;</span>}
+                              </span>
+                            ))}
+                        </td>
 
-                      <td className="links">
-                        <span>
-                          {external && (
-                            <a
-                              href={external}
-                              target="_blank"
-                              rel="nofollow noopener noreferrer"
-                              aria-label="External Link">
-                              <FormattedIcon name="External" />
-                            </a>
-                          )}
-                          {github && (
-                            <a
-                              href={github}
-                              target="_blank"
-                              rel="nofollow noopener noreferrer"
-                              aria-label="GitHub Link">
-                              <FormattedIcon name="GitHub" />
-                            </a>
-                          )}
-                        </span>
-                      </td>
-                    </tr>
-                  );
-                })}
-            </tbody>
-          </StyledTable>
-        </StyledTableContainer>
-      </StyledMainContainer>
-    </Layout>
+                        <td className="links">
+                          <span>
+                            {external && (
+                              <a
+                                href={external}
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                                aria-label="External Link">
+                                <FormattedIcon name="External" />
+                              </a>
+                            )}
+                            {github && (
+                              <a
+                                href={github}
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                                aria-label="GitHub Link">
+                                <FormattedIcon name="GitHub" />
+                              </a>
+                            )}
+                          </span>
+                        </td>
+                      </tr>
+                    );
+                  })}
+              </tbody>
+            </StyledTable>
+          </StyledTableContainer>
+        </StyledMainContainer>
+      </Layout>
+    </LanguageProvider>
   );
 };
 ArchivePage.propTypes = {

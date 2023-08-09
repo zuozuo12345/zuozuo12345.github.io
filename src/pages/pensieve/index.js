@@ -7,6 +7,8 @@ import { Layout } from '@components';
 import { IconZap } from '@components/icons';
 import styled from 'styled-components';
 import { theme, mixins, media, Main } from '@styles';
+import {LanguageProvider } from '@styles/LanguageContext';
+
 const { colors, fontSizes, fonts } = theme;
 
 const StyledMainContainer = styled(Main)`
@@ -121,6 +123,7 @@ const PensievePage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
+    <LanguageProvider>
     <Layout location={location}>
       <Helmet>
         <title>Pensieve | Zuo Yue</title>
@@ -179,7 +182,8 @@ const PensievePage = ({ location, data }) => {
           </div>
         </StyledGrid>
       </StyledMainContainer>
-    </Layout>
+      </Layout>
+      </LanguageProvider>
   );
 };
 

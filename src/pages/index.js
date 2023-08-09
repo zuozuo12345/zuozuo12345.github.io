@@ -1,26 +1,45 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { graphql } from 'gatsby';
 import PropTypes from 'prop-types';
 import { Layout, Hero, About, Jobs, Featured, Projects, Contact } from '@components';
 import styled from 'styled-components';
 import { Main } from '@styles';
+import { useLanguage,LanguageProvider, LanguageContext } from '@styles/LanguageContext'; 
+
 
 const StyledMainContainer = styled(Main)`
   counter-reset: section;
 `;
 
-const IndexPage = ({ location, data }) => (
-  <Layout location={location}>
-    <StyledMainContainer className="fillHeight">
-      <Hero data={data.hero.edges} />
-      <About data={data.about.edges} />
-      <Jobs data={data.jobs.edges} />
-      <Featured data={data.featured.edges} />
-      <Projects data={data.projects.edges} />
-      <Contact data={data.contact.edges} />
-    </StyledMainContainer>
-  </Layout>
-);
+const IndexContent = ({ data }) => {
+  const { language } = useContext(LanguageContext);
+  console.log("Language in IndexContent:", language);
+  console.log("data", data)
+
+  return (
+    <Layout location={location}>
+      <StyledMainContainer className="fillHeight">
+        <Hero data={data.hero.edges} />
+        <About data={data.about.edges} />
+        <Jobs data={data.jobs.edges} />
+        <Featured data={data.featured.edges} />
+        <Projects data={data.projects.edges} />
+        <Contact data={data.contact.edges} />
+      </StyledMainContainer>
+    </Layout>
+  );
+};
+
+const IndexPage = ({ location, data }) => {
+  console.log("data in page",data )
+  return (
+    <LanguageProvider>
+      <IndexContent location={location}  data={data} />
+    </LanguageProvider>
+  );
+};
+
+
 
 IndexPage.propTypes = {
   location: PropTypes.object.isRequired,
@@ -29,9 +48,10 @@ IndexPage.propTypes = {
 
 export default IndexPage;
 
+
 export const pageQuery = graphql`
-  {
-    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
+{
+    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/cn/" } }) {
       edges {
         node {
           frontmatter {

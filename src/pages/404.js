@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import { Layout } from '@components';
 import styled from 'styled-components';
 import { theme, mixins, media, Main } from '@styles';
+import {LanguageProvider } from '@styles/LanguageContext';
 const { colors, fonts, navDelay } = theme;
 
 const StyledMainContainer = styled(Main)`
@@ -39,6 +40,7 @@ const NotFoundPage = ({ location }) => {
   }, []);
 
   return (
+  <LanguageProvider>
     <Layout location={location}>
       <TransitionGroup component={null}>
         {isMounted && (
@@ -51,7 +53,8 @@ const NotFoundPage = ({ location }) => {
           </CSSTransition>
         )}
       </TransitionGroup>
-    </Layout>
+      </Layout>
+    </LanguageProvider>
   );
 };
 
