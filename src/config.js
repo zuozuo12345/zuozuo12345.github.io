@@ -6,8 +6,6 @@ module.exports = {
     'Zuo Yue, Zuo, Yue, zuozuo12345, software developer, software engineer, content freelancer, face mask, face mask detection, web developer, java developer, pepper content, jamshedpur, amdocs, bit, mesra',
   siteUrl: 'https://zuozuo12345.github.io/',
   siteLanguage: 'en_US',
-  // googleAnalyticsID: 'UA-45666519-2',
-  // googleVerification: 'DCl7VAf9tcz6eD9gb67NfkNnJ1PKRNcg8qQiwpbx9Lk',
   name: 'Zuo Yue',
   location: 'Jamshedpur, India',
   email: 'zuozuo12345@gmail.com',
