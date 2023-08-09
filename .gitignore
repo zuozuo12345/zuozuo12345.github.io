@@ -7,5 +7,4 @@ package-lock.json
 # Build directory
 
 .DS_Store
-
 .vscode/
