@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://github.com/zuozuo12345/zuozuo12345.github.io/blob/code/src/images/logo.png" width="100" />
+  <img alt="Logo" src="https://github.com/zuozuo12345/zuozuo12345.github.io/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
   Portfolio Website Version 2
@@ -13,7 +13,7 @@
 </p>
 
 <div align="center">
-  <img alt="Demo" src="https://github.com/zuozuo12345/zuozuo12345.github.io/blob/code/src/images/demo.png" />
+  <img alt="Demo" src="https://github.com/zuozuo12345/zuozuo12345.github.io/src/images/demo.png" />
 </div>
 
 ### TL;DR
@@ -27,19 +27,16 @@ Yes, you can fork this repo. Please give proper credit by linking back to [britt
    ```sh
    npm install -g gatsby-cli
    ```
-
 2. Install and use the correct version of Node using [NVM](https://github.com/nvm-sh/nvm)
 
    ```sh
    nvm install
    ```
-
 3. Install dependencies
 
    ```sh
    yarn
    ```
-
 4. Start the development server
 
    ```sh
@@ -53,8 +50,7 @@ Yes, you can fork this repo. Please give proper credit by linking back to [britt
    ```sh
    npm run build
    ```
-
-1. Preview the site as it will appear once deployed
+2. Preview the site as it will appear once deployed
 
    ```sh
    npm run serve
