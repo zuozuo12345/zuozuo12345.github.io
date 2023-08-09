@@ -1,5 +1,5 @@
 <div align="center">
-  <img alt="Logo" src="https://github.com/zuozuo12345/zuozuo12345.github.io/src/images/logo.png" width="100" />
+  <img alt="Logo" src="https://raw.githubusercontent.com/zuozuo12345/zuozuo12345.github.io/main/src/images/logo.png" width="100" />
 </div>
 <h1 align="center">
   Portfolio Website Version 2
@@ -13,8 +13,9 @@
 </p>
 
 <div align="center">
-  <img alt="Demo" src="https://github.com/zuozuo12345/zuozuo12345.github.io/src/images/demo.png" />
+  <img alt="Demo" src="https://raw.githubusercontent.com/zuozuo12345/zuozuo12345.github.io/main/src/images/demo.png" />
 </div>
+
 
 ### TL;DR
 
