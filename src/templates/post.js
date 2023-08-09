@@ -42,7 +42,7 @@ const PostTemplate = ({ data, location }) => {
   return (
     <Layout location={location}>
       <Helmet>
-        <title>{title} | Chandrika Deb</title>
+        <title>{title} | Zuo Yue</title>
         <link rel="canonical" href="https://zuozuo12345.github.io/pensieve" />
       </Helmet>
 

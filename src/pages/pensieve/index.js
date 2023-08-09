@@ -123,7 +123,7 @@ const PensievePage = ({ location, data }) => {
   return (
     <Layout location={location}>
       <Helmet>
-        <title>Pensieve | Chandrika Deb</title>
+        <title>Pensieve | Zuo Yue</title>
         <link rel="canonical" href="https://zuozuo12345.github.io/pensieve" />
       </Helmet>
 
