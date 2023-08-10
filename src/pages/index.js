@@ -51,7 +51,7 @@ export default IndexPage;
 
 export const pageQuery = graphql`
 {
-    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/cn/" } }) {
+    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
       edges {
         node {
           frontmatter {

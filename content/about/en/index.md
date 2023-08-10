@@ -2,16 +2,16 @@
 title: 'About Me'
 avatar: 'me.jpg'
 skills:
-  - Java Enterprise
+  - Python
   - TypeScript
   - Spring Boot & Maven 
   - AWS
   - Golang
-  - Python
+  - Java Enterprise
   - Jenkins (CI/CD)
   - Kafka & Scala
   - JUnit & TestNG
-  - MySQL & PostgreSQL & MongoDB
+  - MySQL & PostgreSQL & MongoD
 ---
 Hello! Interestingly, I got introduced to programming in my freshman year at [Tsinghua University, Beijing, China](https://www.tsinghua.edu.cn/en/), where I graduated in the Top 10% of my class with a Bachelor's Degree. Currently, I'm pursuing Master of Computer degree (2022-2024)  at [National University of Singapore, Singapore](https://www.nus.edu.sg/).
 

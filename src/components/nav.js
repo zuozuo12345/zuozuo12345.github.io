@@ -280,9 +280,9 @@ class Nav extends Component {
                             </Link>
                           )}
                         </StyledLogo>
-                        <StyledLanguageButton onClick={switchLanguage}>
+                        {/* <StyledLanguageButton onClick={switchLanguage}>
                           {language === 'en' ? '中文' : 'EN'}
-                        </StyledLanguageButton>
+                        </StyledLanguageButton> */}
                       </div> 
                       </CSSTransition>
                     )}
