@@ -27,7 +27,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const result = await graphql(`
       {
         postsRemark: allMarkdownRemark(
-          filter: { fileAbsolutePath:  { regex: "/posts/.*\\.${languageObj.ext}$/" } }
+          filter: { fileAbsolutePath:  { regex: "/posts/" } }
           sort: { order: DESC, fields: [frontmatter___date] }
           limit: 1000
         ) {
@@ -60,7 +60,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         path: `/${node.frontmatter.slug}`,
         component: postTemplate,
         context: {
-          language: `${languageObj.lang}`,
+
        
         },
       });
