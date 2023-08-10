@@ -1,7 +1,7 @@
 ---
 date: '2022-09-16'
 title: 'TikTok Miniprogram: Running Route Planning and Sharing'
-github: 'https://github.com/zuozuo12345/100DaysOfCode'
+github: 'https://github.com/zuozuo12345/daily-running'
 external: ''
 tech:
   - Java
