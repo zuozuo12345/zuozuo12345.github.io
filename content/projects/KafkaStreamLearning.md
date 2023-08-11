@@ -1,7 +1,7 @@
 ---
-date: '2022-12-16'
+date: '2022-02-16'
 title: 'Kafka Stream Learning'
-github: 'https://github.com/it5100ab2023/project2-zuozuo12345'
+github: 'https://github.com/zuozuo12345/kafka-stream-learning'
 external: ''
 tech:
   - Scala

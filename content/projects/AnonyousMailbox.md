@@ -1,7 +1,7 @@
 ---
-date: '2022-08-16'
+date: '2022-03-16'
 title: 'Anonymous Question Box Web Application'
-github: 'https://github.com/IT5007-2220/course-project-project-group-13'
+github: 'https://github.com/zuozuo12345/anony-question-box'
 external: ''
 tech:
   - GraphQL

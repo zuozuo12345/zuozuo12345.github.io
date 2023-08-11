@@ -1,7 +1,7 @@
 ---
 date: '2022-11-16'
 title: 'Scala Todo List'
-github: 'https://github.com/it5100ab2023/project1-zuozuo12345'
+github: 'https://github.com/zuozuo12345/scala-todo-list'
 external: ''
 tech:
   - Scala

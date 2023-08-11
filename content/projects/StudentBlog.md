@@ -1,12 +1,14 @@
 ---
 date: '2022-04-16'
 title: 'Student Blog'
-github: 'https://github.com/zuozuo12345/100DaysOfCode'
+github: 'https://github.com/zuozuo12345/my-blo'
 external: ''
 tech:
-  - Netty
-  - Zookeeper
-  - Java
+  - Next.js
+  - TypeScript
+  - MySQL
+  - React.js
+  - 
 
 company: ''
 showInProjects: true
