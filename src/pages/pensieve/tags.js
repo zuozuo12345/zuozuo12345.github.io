@@ -43,7 +43,7 @@ const TagsPage = ({
   },
   location,
 }) => (
-  <LanguageProvider>
+  // <LanguageProvider>
   <Layout location={location}>
     <Helmet title={title} />
 
@@ -65,7 +65,7 @@ const TagsPage = ({
       </ul>
     </StyledTagsContainer>
     </Layout>
-   </LanguageProvider>
+  //  {/* </LanguageProvider> */}
 );
 
 TagsPage.propTypes = {

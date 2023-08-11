@@ -234,7 +234,95 @@ var utils = __webpack_require__(8439);
 var LanguageContext = __webpack_require__(4399);
 ;// CONCATENATED MODULE: ./src/components/nav.js
 const{colors: nav_colors,fontSizes: nav_fontSizes,fonts: nav_fonts,loaderDelay}=styles.theme;const nav_StyledContainer=styled_components_esm["default"].header.withConfig({displayName:"nav__StyledContainer",componentId:"sc-77fyu6-0"})(["",";position:fixed;top:0;padding:0px 50px;background-color:",";transition:",";z-index:11;filter:none !important;pointer-events:auto !important;user-select:auto !important;width:100%;height:",";box-shadow:",";transform:translateY( "," );",";",";"],styles/* mixins */.tA.flexBetween,nav_colors.navy,styles.theme.transition,props=>props.scrollDirection==='none'?styles.theme.navHeight:styles.theme.navScrollHeight,props=>props.scrollDirection==='up'?`0 10px 30px -10px ${nav_colors.shadowNavy}`:'none',props=>props.scrollDirection==='down'?`-${styles.theme.navScrollHeight}`:'0px',styles/* media */.BC.desktop`padding: 0 40px;`,styles/* media */.BC.tablet`padding: 0 25px;`);const StyledNav=styled_components_esm["default"].nav.withConfig({displayName:"nav__StyledNav",componentId:"sc-77fyu6-1"})(["",";position:relative;width:100%;color:",";font-family:",";counter-reset:item 0;z-index:12;"],styles/* mixins */.tA.flexBetween,nav_colors.lightestSlate,nav_fonts.SFMono);const nav_StyledLogo=styled_components_esm["default"].div.withConfig({displayName:"nav__StyledLogo",componentId:"sc-77fyu6-2"})(["",";a{display:block;color:",";width:42px;height:42px;&:hover,&:focus{svg{fill:",";}}svg{fill:none;transition:",";user-select:none;}}"],styles/* mixins */.tA.flexCenter,nav_colors.green,nav_colors.transGreen,styles.theme.transition);const StyledHamburger=styled_components_esm["default"].div.withConfig({displayName:"nav__StyledHamburger",componentId:"sc-77fyu6-3"})(["",";overflow:visible;margin:0 -12px 0 0;padding:15px;cursor:pointer;transition-timing-function:linear;transition-duration:0.15s;transition-property:opacity,filter;text-transform:none;color:inherit;border:0;background-color:transparent;display:none;",";"],styles/* mixins */.tA.flexCenter,styles/* media */.BC.tablet`display: flex;`);const StyledHamburgerBox=styled_components_esm["default"].div.withConfig({displayName:"nav__StyledHamburgerBox",componentId:"sc-77fyu6-4"})(["position:relative;display:inline-block;width:","px;height:24px;"],styles.theme.hamburgerWidth);const StyledHamburgerInner=styled_components_esm["default"].div.withConfig({displayName:"nav__StyledHamburgerInner",componentId:"sc-77fyu6-5"})(["background-color:",";position:absolute;width:","px;height:2px;border-radius:",";top:50%;left:0;right:0;transition-duration:0.22s;transition-property:transform;transition-delay:",";transform:rotate(",");transition-timing-function:cubic-bezier( "," );&:before,&:after{content:'';display:block;background-color:",";position:absolute;left:auto;right:0;width:","px;height:2px;transition-timing-function:ease;transition-duration:0.15s;transition-property:transform;border-radius:4px;}&:before{width:",";top:",";opacity:",";transition:",";}&:after{width:",";bottom:",";transform:rotate(",");transition:",";}"],nav_colors.green,styles.theme.hamburgerWidth,styles.theme.borderRadius,props=>props.menuOpen?`0.12s`:`0s`,props=>props.menuOpen?`225deg`:`0deg`,props=>props.menuOpen?`0.215, 0.61, 0.355, 1`:`0.55, 0.055, 0.675, 0.19`,nav_colors.green,styles.theme.hamburgerWidth,props=>props.menuOpen?`100%`:`120%`,props=>props.menuOpen?`0`:`-10px`,props=>props.menuOpen?0:1,props=>props.menuOpen?styles.theme.hamBeforeActive:styles.theme.hamBefore,props=>props.menuOpen?`100%`:`80%`,props=>props.menuOpen?`0`:`-10px`,props=>props.menuOpen?`-90deg`:`0`,props=>props.menuOpen?styles.theme.hamAfterActive:styles.theme.hamAfter);const StyledLink=styled_components_esm["default"].div.withConfig({displayName:"nav__StyledLink",componentId:"sc-77fyu6-6"})(["display:flex;align-items:center;",";"],styles/* media */.BC.tablet`display: none;`);const StyledList=styled_components_esm["default"].ol.withConfig({displayName:"nav__StyledList",componentId:"sc-77fyu6-7"})(["",";padding:0;margin:0;list-style:none;"],styles/* mixins */.tA.flexBetween);const StyledListItem=styled_components_esm["default"].li.withConfig({displayName:"nav__StyledListItem",componentId:"sc-77fyu6-8"})(["margin:0 10px;position:relative;font-size:",";counter-increment:item 1;&:before{content:'0' counter(item) '.';text-align:right;color:",";font-size:",";}"],nav_fontSizes.smish,nav_colors.green,nav_fontSizes.xs);const StyledListLink=(0,styled_components_esm["default"])(gatsby_browser_entry.Link).withConfig({displayName:"nav__StyledListLink",componentId:"sc-77fyu6-9"})(["padding:12px 10px;"]);const StyledResumeButton=styled_components_esm["default"].a.withConfig({displayName:"nav__StyledResumeButton",componentId:"sc-77fyu6-10"})(["",";margin-left:10px;font-size:",";"],styles/* mixins */.tA.smallButton,nav_fontSizes.smish);const StyledLanguageButton=styled_components_esm["default"].a.withConfig({displayName:"nav__StyledLanguageButton",componentId:"sc-77fyu6-11"})(["",";margin-left:40px;font-size:",";"],styles/* mixins */.tA.smallButton,nav_fontSizes.smish);const DELTA=5;class Nav extends index_js_.Component{constructor(...args){super(...args);this.state={isMounted:!this.props.isHome,menuOpen:false,scrollDirection:'none',lastScrollTop:0};this.toggleMenu=()=>this.setState({menuOpen:!this.state.menuOpen});this.handleScroll=()=>{const{isMounted,menuOpen,scrollDirection,lastScrollTop}=this.state;const fromTop=window.scrollY;// Make sure they scroll more than DELTA
-if(!isMounted||Math.abs(lastScrollTop-fromTop)<=DELTA||menuOpen){return;}if(fromTop<DELTA){this.setState({scrollDirection:'none'});}else if(fromTop>lastScrollTop&&fromTop>config.navHeight){if(scrollDirection!=='down'){this.setState({scrollDirection:'down'});}}else if(fromTop+window.innerHeight<document.body.scrollHeight){if(scrollDirection!=='up'){this.setState({scrollDirection:'up'});}}this.setState({lastScrollTop:fromTop});};this.handleResize=()=>{if(window.innerWidth>768&&this.state.menuOpen){this.toggleMenu();}};this.handleKeydown=e=>{if(!this.state.menuOpen){return;}if(e.which===27||e.key==='Escape'){this.toggleMenu();}};}componentDidMount(){setTimeout(()=>this.setState({isMounted:true},()=>{window.addEventListener('scroll',()=>(0,utils/* throttle */.P)(this.handleScroll()));window.addEventListener('resize',()=>(0,utils/* throttle */.P)(this.handleResize()));window.addEventListener('keydown',e=>this.handleKeydown(e));}),100);}componentWillUnmount(){window.removeEventListener('scroll',()=>this.handleScroll());window.removeEventListener('resize',()=>this.handleResize());window.removeEventListener('keydown',e=>this.handleKeydown(e));}render(){const{isMounted,menuOpen,scrollDirection}=this.state;const{isHome}=this.props;const timeout=isHome?loaderDelay:0;const fadeClass=isHome?'fade':'';const fadeDownClass=isHome?'fadedown':'';return/*#__PURE__*/index_js_default().createElement(LanguageContext/* LanguageContext */.AZ.Consumer,null,({language,setLanguage})=>{const switchLanguage=()=>{setLanguage(language==='en'?'cn':'en');console.log("language in nav",language);};return/*#__PURE__*/index_js_default().createElement((index_js_default()).Fragment,null,/*#__PURE__*/index_js_default().createElement(nav_StyledContainer,{scrollDirection:scrollDirection},/*#__PURE__*/index_js_default().createElement(Helmet["default"],null,/*#__PURE__*/index_js_default().createElement("body",{className:menuOpen?'blur':''})),/*#__PURE__*/index_js_default().createElement(StyledNav,null,/*#__PURE__*/index_js_default().createElement(TransitionGroup/* default */.Z,{component:null},isMounted&&/*#__PURE__*/index_js_default().createElement(CSSTransition/* default */.Z,{classNames:fadeClass,timeout:timeout},/*#__PURE__*/index_js_default().createElement("div",{style:{display:'flex',alignItems:'center'}},/*#__PURE__*/index_js_default().createElement(nav_StyledLogo,{tabindex:"-1"},isHome?/*#__PURE__*/index_js_default().createElement("a",{href:"/","aria-label":"home"},/*#__PURE__*/index_js_default().createElement(icons/* IconLogo */.mp,null)):/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.Link,{to:"/","aria-label":"home"},/*#__PURE__*/index_js_default().createElement(icons/* IconLogo */.mp,null)))))),/*#__PURE__*/index_js_default().createElement(TransitionGroup/* default */.Z,{component:null},isMounted&&/*#__PURE__*/index_js_default().createElement(CSSTransition/* default */.Z,{classNames:fadeClass,timeout:timeout},/*#__PURE__*/index_js_default().createElement(StyledHamburger,{onClick:this.toggleMenu},/*#__PURE__*/index_js_default().createElement(StyledHamburgerBox,null,/*#__PURE__*/index_js_default().createElement(StyledHamburgerInner,{menuOpen:menuOpen}))))),/*#__PURE__*/index_js_default().createElement(StyledLink,null,/*#__PURE__*/index_js_default().createElement(StyledList,null,/*#__PURE__*/index_js_default().createElement(TransitionGroup/* default */.Z,{component:null},isMounted&&config.navLinks&&config.navLinks.map(({url,name},i)=>/*#__PURE__*/index_js_default().createElement(CSSTransition/* default */.Z,{key:i,classNames:fadeDownClass,timeout:timeout},/*#__PURE__*/index_js_default().createElement(StyledListItem,{key:i,style:{transitionDelay:`${isHome?i*100:0}ms`}},/*#__PURE__*/index_js_default().createElement(StyledListLink,{to:url},name)))))),/*#__PURE__*/index_js_default().createElement(TransitionGroup/* default */.Z,{component:null},isMounted&&/*#__PURE__*/index_js_default().createElement(CSSTransition/* default */.Z,{classNames:fadeDownClass,timeout:timeout},/*#__PURE__*/index_js_default().createElement("div",{style:{transitionDelay:`${isHome?config.navLinks.length*100:0}ms`}},/*#__PURE__*/index_js_default().createElement(StyledResumeButton,{href:"/resume.pdf",target:"_blank",rel:"nofollow noopener noreferrer"},"Resume")))))),/*#__PURE__*/index_js_default().createElement(menu,{menuOpen:menuOpen,toggleMenu:this.toggleMenu})));});}}Nav.propTypes={isHome:(prop_types_default()).bool};/* harmony default export */ const nav = (Nav);
+if(!isMounted||Math.abs(lastScrollTop-fromTop)<=DELTA||menuOpen){return;}if(fromTop<DELTA){this.setState({scrollDirection:'none'});}else if(fromTop>lastScrollTop&&fromTop>config.navHeight){if(scrollDirection!=='down'){this.setState({scrollDirection:'down'});}}else if(fromTop+window.innerHeight<document.body.scrollHeight){if(scrollDirection!=='up'){this.setState({scrollDirection:'up'});}}this.setState({lastScrollTop:fromTop});};this.handleResize=()=>{if(window.innerWidth>768&&this.state.menuOpen){this.toggleMenu();}};this.handleKeydown=e=>{if(!this.state.menuOpen){return;}if(e.which===27||e.key==='Escape'){this.toggleMenu();}};}componentDidMount(){setTimeout(()=>this.setState({isMounted:true},()=>{window.addEventListener('scroll',()=>(0,utils/* throttle */.P)(this.handleScroll()));window.addEventListener('resize',()=>(0,utils/* throttle */.P)(this.handleResize()));window.addEventListener('keydown',e=>this.handleKeydown(e));}),100);}componentWillUnmount(){window.removeEventListener('scroll',()=>this.handleScroll());window.removeEventListener('resize',()=>this.handleResize());window.removeEventListener('keydown',e=>this.handleKeydown(e));}render(){const{isMounted,menuOpen,scrollDirection}=this.state;const{isHome}=this.props;const timeout=isHome?loaderDelay:0;const fadeClass=isHome?'fade':'';const fadeDownClass=isHome?'fadedown':'';return/*#__PURE__*/ (// <LanguageContext.Consumer>
+index_js_default().createElement(nav_StyledContainer,{scrollDirection:scrollDirection},/*#__PURE__*/index_js_default().createElement(Helmet["default"],null,/*#__PURE__*/index_js_default().createElement("body",{className:menuOpen?'blur':''})),/*#__PURE__*/index_js_default().createElement(StyledNav,null,/*#__PURE__*/index_js_default().createElement(TransitionGroup/* default */.Z,{component:null},isMounted&&/*#__PURE__*/index_js_default().createElement(CSSTransition/* default */.Z,{classNames:fadeClass,timeout:timeout},/*#__PURE__*/index_js_default().createElement("div",{style:{display:'flex',alignItems:'center'}},/*#__PURE__*/index_js_default().createElement(nav_StyledLogo,{tabindex:"-1"},isHome?/*#__PURE__*/index_js_default().createElement("a",{href:"/","aria-label":"home"},/*#__PURE__*/index_js_default().createElement(icons/* IconLogo */.mp,null)):/*#__PURE__*/index_js_default().createElement(gatsby_browser_entry.Link,{to:"/","aria-label":"home"},/*#__PURE__*/index_js_default().createElement(icons/* IconLogo */.mp,null)))))),/*#__PURE__*/index_js_default().createElement(TransitionGroup/* default */.Z,{component:null},isMounted&&/*#__PURE__*/index_js_default().createElement(CSSTransition/* default */.Z,{classNames:fadeClass,timeout:timeout},/*#__PURE__*/index_js_default().createElement(StyledHamburger,{onClick:this.toggleMenu},/*#__PURE__*/index_js_default().createElement(StyledHamburgerBox,null,/*#__PURE__*/index_js_default().createElement(StyledHamburgerInner,{menuOpen:menuOpen}))))),/*#__PURE__*/index_js_default().createElement(StyledLink,null,/*#__PURE__*/index_js_default().createElement(StyledList,null,/*#__PURE__*/index_js_default().createElement(TransitionGroup/* default */.Z,{component:null},isMounted&&config.navLinks&&config.navLinks.map(({url,name},i)=>/*#__PURE__*/index_js_default().createElement(CSSTransition/* default */.Z,{key:i,classNames:fadeDownClass,timeout:timeout},/*#__PURE__*/index_js_default().createElement(StyledListItem,{key:i,style:{transitionDelay:`${isHome?i*100:0}ms`}},/*#__PURE__*/index_js_default().createElement(StyledListLink,{to:url},name)))))),/*#__PURE__*/index_js_default().createElement(TransitionGroup/* default */.Z,{component:null},isMounted&&/*#__PURE__*/index_js_default().createElement(CSSTransition/* default */.Z,{classNames:fadeDownClass,timeout:timeout},/*#__PURE__*/index_js_default().createElement("div",{style:{transitionDelay:`${isHome?config.navLinks.length*100:0}ms`}},/*#__PURE__*/index_js_default().createElement(StyledResumeButton,{href:"/resume.pdf",target:"_blank",rel:"nofollow noopener noreferrer"},"Resume")))))),/*#__PURE__*/index_js_default().createElement(menu,{menuOpen:menuOpen,toggleMenu:this.toggleMenu}))// </LanguageContext.Consumer>
+);// return (
+//   <LanguageContext.Consumer>
+//     {({ language, setLanguage }) => {
+//       const switchLanguage = () => {
+//         setLanguage(language === 'en' ? 'cn' : 'en');
+//         console.log("language in nav",language)
+//       };
+//       return (
+//         <>
+//           <StyledContainer scrollDirection={scrollDirection}>
+//             <Helmet>
+//               <body className={menuOpen ? 'blur' : ''} />
+//             </Helmet>
+//             <StyledNav>
+//               <TransitionGroup component={null}>
+//                 {isMounted && (
+//                   <CSSTransition classNames={fadeClass} timeout={timeout}>
+//                     <div style={{ display: 'flex', alignItems: 'center' }}> 
+//                     <StyledLogo tabindex="-1">
+//                       {isHome ? (
+//                         <a href="/" aria-label="home">
+//                           <IconLogo />
+//                         </a>
+//                       ) : (
+//                         <Link to="/" aria-label="home">
+//                           <IconLogo />
+//                         </Link>
+//                       )}
+//                     </StyledLogo>
+//                     {/* <StyledLanguageButton onClick={switchLanguage}>
+//                       {language === 'en' ? '中文' : 'EN'}
+//                     </StyledLanguageButton> */}
+//                   </div> 
+//                   </CSSTransition>
+//                 )}
+//               </TransitionGroup>
+//               <TransitionGroup component={null}>
+//                 {isMounted && (
+//                   <CSSTransition classNames={fadeClass} timeout={timeout}>
+//                     <StyledHamburger onClick={this.toggleMenu}>
+//                       <StyledHamburgerBox>
+//                         <StyledHamburgerInner menuOpen={menuOpen} />
+//                       </StyledHamburgerBox>
+//                     </StyledHamburger>
+//                   </CSSTransition>
+//                 )}
+//               </TransitionGroup>
+//               <StyledLink>
+//                 <StyledList>
+//                   <TransitionGroup component={null}>
+//                     {isMounted &&
+//                       navLinks &&
+//                       navLinks.map(({ url, name }, i) => (
+//                         <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
+//                           <StyledListItem
+//                             key={i}
+//                             style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
+//                             <StyledListLink to={url}>{name}</StyledListLink>
+//                           </StyledListItem>
+//                         </CSSTransition>
+//                       ))}
+//                   </TransitionGroup>
+//                 </StyledList>
+//                 <TransitionGroup component={null}>
+//                   {isMounted && (
+//                     <CSSTransition classNames={fadeDownClass} timeout={timeout}>
+//                       <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
+//                         <StyledResumeButton
+//                           href="/resume.pdf"
+//                           target="_blank"
+//                           rel="nofollow noopener noreferrer">
+//                           Resume
+//                         </StyledResumeButton>
+//                       </div>
+//                     </CSSTransition>
+//                   )}
+//                 </TransitionGroup>
+//               </StyledLink>
+//             </StyledNav>
+//             <Menu menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
+//           </StyledContainer>
+//         </>
+//       );
+//     }}
+//   </LanguageContext.Consumer>
+// );
+}}Nav.propTypes={isHome:(prop_types_default()).bool};/* harmony default export */ const nav = (Nav);
 ;// CONCATENATED MODULE: ./src/components/menu.js
 const{colors: menu_colors,fontSizes: menu_fontSizes,fonts: menu_fonts}=styles.theme;const menu_StyledContainer=styled_components_esm["default"].div.withConfig({displayName:"menu__StyledContainer",componentId:"sc-2t194n-0"})(["position:fixed;top:0;bottom:0;right:0;width:100%;height:100vh;z-index:10;outline:0;transition:",";transform:translateX(","vw);visibility:",";display:none;",";"],styles.theme.transition,props=>props.menuOpen?0:100,props=>props.menuOpen?'visible':'hidden',styles/* media */.BC.tablet`display: block;`);const Sidebar=styled_components_esm["default"].aside.withConfig({displayName:"menu__Sidebar",componentId:"sc-2t194n-1"})(["",";flex-direction:column;background-color:",";padding:50px;width:50vw;height:100%;position:relative;right:0;margin-left:auto;font-family:",";box-shadow:-10px 0px 30px -15px ",";",";",";",";"],styles/* mixins */.tA.flexCenter,menu_colors.lightNavy,menu_fonts.SFMono,menu_colors.shadowNavy,styles/* media */.BC.thone`padding: 25px;`,styles/* media */.BC.phablet`width: 75vw;`,styles/* media */.BC.tiny`padding: 10px;`);const NavLinks=styled_components_esm["default"].nav.withConfig({displayName:"menu__NavLinks",componentId:"sc-2t194n-2"})(["",";width:100%;flex-direction:column;text-align:center;color:",";"],styles/* mixins */.tA.flexBetween,menu_colors.lightestSlate);const NavList=styled_components_esm["default"].ol.withConfig({displayName:"menu__NavList",componentId:"sc-2t194n-3"})(["padding:0;margin:0;list-style:none;width:100%;"]);const NavListItem=styled_components_esm["default"].li.withConfig({displayName:"menu__NavListItem",componentId:"sc-2t194n-4"})(["margin:0 auto 20px;position:relative;font-size:",";counter-increment:item 1;",";",";&:before{display:block;content:'0' counter(item) '.';color:",";font-size:",";margin-bottom:5px;}"],menu_fontSizes.lg,styles/* media */.BC.thone`
     margin: 0 auto 10px;
@@ -354,14 +442,10 @@ module.exports={siteTitle:'Zuo Yue | Software Developer',siteDescription:'Zuo Yu
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   AZ: () => (/* binding */ LanguageContext),
-/* harmony export */   iL: () => (/* binding */ LanguageProvider)
-/* harmony export */ });
-/* unused harmony export useLanguage */
+/* unused harmony exports LanguageContext, LanguageProvider, useLanguage */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5285);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-const LanguageContext=/*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_0__.createContext)();const LanguageProvider=({children})=>{const{0:language,1:setLanguage}=(0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('en');(0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(()=>{console.log('Current language:',language);},[language]);return/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LanguageContext.Provider,{value:{language,setLanguage}},children);};const useLanguage=()=>{const context=useContext(LanguageContext);if(!context){throw new Error('aaaaaa');}return context;};
+const LanguageContext=/*#__PURE__*/(/* unused pure expression or super */ null && (createContext()));const LanguageProvider=({children})=>{const{0:language,1:setLanguage}=useState('en');useEffect(()=>{console.log('Current language:',language);},[language]);return/*#__PURE__*/React.createElement(LanguageContext.Provider,{value:{language,setLanguage}},children);};const useLanguage=()=>{const context=useContext(LanguageContext);if(!context){throw new Error('aaaaaa');}return context;};
 
 /***/ }),
 

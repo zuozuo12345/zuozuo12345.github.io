@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://zuozuo12345.github.io/sitemap-index.xml
+Host: https://zuozuo12345.github.io
