@@ -174,7 +174,7 @@ const IndexPage = ({ location, data }) => (
 
 IndexPage.propTypes = {
   location: PropTypes.object.isRequired,
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,    
 };
 
 export default IndexPage;
