@@ -21,18 +21,18 @@ module.exports = {
       name: 'Linkedin',
       url: 'https://www.linkedin.com/in/yue-zuo-97a72021a',
     },
-    {
-      name: 'Codepen',
-      url: 'https://codepen.io/zuozuo12345',
-    },
-    {
-      name: 'Instagram',
-      url: 'https://www.instagram.com/zuozuo12345',
-    },
-    {
-      name: 'Twitter',
-      url: 'https://twitter.com/zuozuo12345',
-    },
+    // {
+    //   name: 'Codepen',
+    //   url: 'https://codepen.io/zuozuo12345',
+    // },
+    // {
+    //   name: 'Instagram',
+    //   url: 'https://www.instagram.com/zuozuo12345',
+    // },
+    // {
+    //   name: 'Twitter',
+    //   url: 'https://twitter.com/zuozuo12345',
+    // },
   ],
 
   navLinks: [
