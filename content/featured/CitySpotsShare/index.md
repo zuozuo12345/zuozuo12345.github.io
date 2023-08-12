@@ -14,4 +14,4 @@ tech:
   - AWS
 showInProjects: true
 ---
-Developed a social-driven web application for local spot recommendations and reviews in **Java** with  **JavaScript** ,  **Spring Boot** ,**My****B**atis** , ****My****SQL** , **Redis** and  **Vue.js** .
+Developed a social-driven web application for local spot recommendations and reviews in **Java** with  **JavaScript** ,  **Spring Boot**, **MyBatis**, **MySQL** , **Redis** and  **Vue.js** .
