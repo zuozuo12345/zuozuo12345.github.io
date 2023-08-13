@@ -246,6 +246,16 @@ class Nav extends Component {
     const fadeClass = isHome ? 'fade' : '';
     const fadeDownClass = isHome ? 'fadedown' : '';
 
+      // In your Nav component, use the hook
+const { language, setLanguage } = useLanguage();
+
+// Create a function to switch the language
+const switchLanguage = () => {
+  const newLanguage = language === 'en' ? 'cn' : language === 'cn' ? 'jp' : 'en';
+  setLanguage(newLanguage);
+};
+
+
     return (
       // <LanguageContext.Consumer>
        
@@ -269,9 +279,9 @@ class Nav extends Component {
                             </Link>
                           )}
                         </StyledLogo>
-                        {/* <StyledLanguageButton onClick={switchLanguage}>
-                          {language === 'en' ? '中文' : 'EN'}
-                        </StyledLanguageButton> */}
+                        <StyledLanguageButton onClick={switchLanguage}>
+  {language === 'en' ? '中文' : language === 'cn' ? '日本語' : 'EN'}
+</StyledLanguageButton>
                       </div> 
                       </CSSTransition>
                     )}

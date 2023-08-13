@@ -1,5 +1,5 @@
 ---
-title: 'About Me'
+title: 'About Me EN'
 avatar: 'me.jpg'
 slug: "/about/en/"
 skills:
@@ -12,7 +12,7 @@ skills:
   - Jenkins (CI/CD)
   - Kafka & Scala
   - JUnit & TestNG
-  - MySQL & PostgreSQL & MongoD
+  - MySQL & PostgreSQL & MongoDB
 ---
 Hello! Interestingly, I got introduced to programming in my freshman year at [Tsinghua University, Beijing, China](https://www.tsinghua.edu.cn/en/), where I graduated in the Top 10% of my class with a Bachelor's Degree. Currently, I'm pursuing Master of Computer degree (2022-2024)  at [National University of Singapore, Singapore](https://www.nus.edu.sg/).
 
