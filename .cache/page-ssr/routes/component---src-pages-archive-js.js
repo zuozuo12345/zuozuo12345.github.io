@@ -3522,6 +3522,12 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
     const timeout = isHome ? loaderDelay : 0;
     const fadeClass = isHome ? 'fade' : '';
     const fadeDownClass = isHome ? 'fadedown' : '';
+
+    // In your Nav component, use the hook
+    const {
+      language,
+      switchLanguage
+    } = (0,_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_8__.useLanguage)();
     return (
       /*#__PURE__*/
       // <LanguageContext.Consumer>
@@ -3547,7 +3553,15 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/",
         "aria-label": "home"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButtons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('en')
+      }, "EN"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('cn')
+      }, "\u4E2D\u6587"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('de')
+      }, "Deutsch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('jp')
+      }, "\u65E5\u672C\u8A9E"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_10__["default"], {
         component: null
       }, isMounted && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_11__["default"], {
         classNames: fadeClass,
@@ -4800,74 +4814,68 @@ const ArchivePage = ({
     _utils_sr__WEBPACK_IMPORTED_MODULE_2__["default"].reveal(revealTable.current, (0,_config__WEBPACK_IMPORTED_MODULE_3__.srConfig)());
     revealProjects.current.forEach((ref, i) => _utils_sr__WEBPACK_IMPORTED_MODULE_2__["default"].reveal(ref, (0,_config__WEBPACK_IMPORTED_MODULE_3__.srConfig)(i * 10)));
   }, []);
-  return (
-    /*#__PURE__*/
-    // <LanguageProvider>
-    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_4__.Layout, {
-      location: location
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__.Helmet, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Archive | Zuo Yue"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
-      rel: "canonical",
-      href: "https://zuozuo12345.github.io/archive"
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledMainContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", {
-      ref: revealTitle
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
-      className: "big-title"
-    }, "Archive"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-      className: "subtitle"
-    }, "A big list of things I\u2019ve worked on")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledTableContainer, {
-      ref: revealTable
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledTable, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Year"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", {
-      className: "hide-on-mobile"
-    }, "Made at"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", {
-      className: "hide-on-mobile"
-    }, "Built with"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Link"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tbody", null, projects.length > 0 && projects.map(({
-      node
-    }, i) => {
-      const {
-        date,
-        github,
-        external,
-        title,
-        tech,
-        company
-      } = node.frontmatter;
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", {
-        key: i,
-        ref: el => revealProjects.current[i] = el
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
-        className: "overline year"
-      }, `${new Date(date).getFullYear()}`), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
-        className: "title"
-      }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
-        className: "company hide-on-mobile"
-      }, company ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, company) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "\u2014")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
-        className: "tech hide-on-mobile"
-      }, tech.length > 0 && tech.map((item, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-        key: i
-      }, item, '', i !== tech.length - 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
-        className: "separator"
-      }, "\xB7")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
-        className: "links"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, external && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-        href: external,
-        target: "_blank",
-        rel: "nofollow noopener noreferrer",
-        "aria-label": "External Link"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_5__.FormattedIcon, {
-        name: "External"
-      })), github && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-        href: github,
-        target: "_blank",
-        rel: "nofollow noopener noreferrer",
-        "aria-label": "GitHub Link"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_5__.FormattedIcon, {
-        name: "GitHub"
-      })))));
-    }))))))
-    // </LanguageProvider>
-  );
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_7__.LanguageProvider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_4__.Layout, {
+    location: location
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__.Helmet, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Archive | Zuo Yue"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
+    rel: "canonical",
+    href: "https://zuozuo12345.github.io/archive"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledMainContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", {
+    ref: revealTitle
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "big-title"
+  }, "Archive"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "subtitle"
+  }, "A big list of things I\u2019ve worked on")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledTableContainer, {
+    ref: revealTable
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledTable, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("thead", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Year"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Title"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", {
+    className: "hide-on-mobile"
+  }, "Made at"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", {
+    className: "hide-on-mobile"
+  }, "Built with"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("th", null, "Link"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tbody", null, projects.length > 0 && projects.map(({
+    node
+  }, i) => {
+    const {
+      date,
+      github,
+      external,
+      title,
+      tech,
+      company
+    } = node.frontmatter;
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("tr", {
+      key: i,
+      ref: el => revealProjects.current[i] = el
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
+      className: "overline year"
+    }, `${new Date(date).getFullYear()}`), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
+      className: "title"
+    }, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
+      className: "company hide-on-mobile"
+    }, company ? /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, company) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, "\u2014")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
+      className: "tech hide-on-mobile"
+    }, tech.length > 0 && tech.map((item, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      key: i
+    }, item, '', i !== tech.length - 1 && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
+      className: "separator"
+    }, "\xB7")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("td", {
+      className: "links"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", null, external && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: external,
+      target: "_blank",
+      rel: "nofollow noopener noreferrer",
+      "aria-label": "External Link"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_5__.FormattedIcon, {
+      name: "External"
+    })), github && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+      href: github,
+      target: "_blank",
+      rel: "nofollow noopener noreferrer",
+      "aria-label": "GitHub Link"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_5__.FormattedIcon, {
+      name: "GitHub"
+    })))));
+  })))))));
 };
-
 ArchivePage.propTypes = {
   location: (prop_types__WEBPACK_IMPORTED_MODULE_9___default().object).isRequired,
   data: (prop_types__WEBPACK_IMPORTED_MODULE_9___default().object).isRequired
@@ -5059,13 +5067,11 @@ const LanguageProvider = ({
     0: language,
     1: setLanguage
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('en');
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    console.log('Current language:', language);
-  }, [language]);
+  const switchLanguage = lang => setLanguage(lang);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LanguageContext.Provider, {
     value: {
       language,
-      setLanguage
+      switchLanguage
     }
   }, children);
 };

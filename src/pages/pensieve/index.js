@@ -123,7 +123,7 @@ const PensievePage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
 
   return (
-    // <LanguageProvider>
+    <LanguageProvider>
     <Layout location={location}>
       <Helmet>
         <title>Pensieve | Zuo Yue</title>
@@ -183,7 +183,7 @@ const PensievePage = ({ location, data }) => {
         </StyledGrid>
       </StyledMainContainer>
       </Layout>
-      // </LanguageProvider>
+    </LanguageProvider>
   );
 };
 

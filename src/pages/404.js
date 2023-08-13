@@ -40,7 +40,7 @@ const NotFoundPage = ({ location }) => {
   }, []);
 
   return (
-  // <LanguageProvider>
+  <LanguageProvider>
     <Layout location={location}>
       <TransitionGroup component={null}>
         {isMounted && (
@@ -54,7 +54,7 @@ const NotFoundPage = ({ location }) => {
         )}
       </TransitionGroup>
       </Layout>
-    // </LanguageProvider>
+   </LanguageProvider>
   );
 };
 

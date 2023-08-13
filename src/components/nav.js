@@ -171,6 +171,7 @@ const StyledLanguageButton = styled.a`
 const DELTA = 5;
 
 class Nav extends Component {
+
   state = {
     isMounted: !this.props.isHome,
     menuOpen: false,
@@ -246,19 +247,13 @@ class Nav extends Component {
     const fadeClass = isHome ? 'fade' : '';
     const fadeDownClass = isHome ? 'fadedown' : '';
 
-      // In your Nav component, use the hook
-const { language, setLanguage } = useLanguage();
-
-// Create a function to switch the language
-const switchLanguage = () => {
-  const newLanguage = language === 'en' ? 'cn' : language === 'cn' ? 'jp' : 'en';
-  setLanguage(newLanguage);
-};
 
 
     return (
-      // <LanguageContext.Consumer>
-       
+      <LanguageContext.Consumer>
+        {({ language, switchLanguage }) => {
+          return (
+            <>
               <StyledContainer scrollDirection={scrollDirection}>
                 <Helmet>
                   <body className={menuOpen ? 'blur' : ''} />
@@ -279,9 +274,25 @@ const switchLanguage = () => {
                             </Link>
                           )}
                         </StyledLogo>
-                        <StyledLanguageButton onClick={switchLanguage}>
-  {language === 'en' ? '中文' : language === 'cn' ? '日本語' : 'EN'}
-</StyledLanguageButton>
+                          <StyledLanguageButton onClick={() => {
+                            switchLanguage('en');
+                            console.log("language", language)
+                          }
+                          }>EN</StyledLanguageButton>
+                          <StyledLanguageButton onClick={() => {
+                            switchLanguage('cn');
+                            console.log("language", language)
+                          }}>中文</StyledLanguageButton>
+                          <StyledLanguageButton onClick={() => {
+                            switchLanguage('de');
+                            console.log("language", language)
+                          }}>Deutsch</StyledLanguageButton>
+                          <StyledLanguageButton onClick={() => {
+                            switchLanguage('jp');
+                            console.log("language", language)
+                          }
+                      }>日語</StyledLanguageButton>
+
                       </div> 
                       </CSSTransition>
                     )}
@@ -338,106 +349,11 @@ const switchLanguage = () => {
 
                 <Menu menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
               </StyledContainer>
-        
-      // </LanguageContext.Consumer>
+            </>
+          );
+        }}
+      </LanguageContext.Consumer>
     );
-
-    // return (
-    //   <LanguageContext.Consumer>
-    //     {({ language, setLanguage }) => {
-
-    //       const switchLanguage = () => {
-    //         setLanguage(language === 'en' ? 'cn' : 'en');
-    //         console.log("language in nav",language)
-    //       };
-          
-  
-    //       return (
-    //         <>
-    //           <StyledContainer scrollDirection={scrollDirection}>
-    //             <Helmet>
-    //               <body className={menuOpen ? 'blur' : ''} />
-    //             </Helmet>
-    //             <StyledNav>
-    //               <TransitionGroup component={null}>
-    //                 {isMounted && (
-    //                   <CSSTransition classNames={fadeClass} timeout={timeout}>
-    //                     <div style={{ display: 'flex', alignItems: 'center' }}> 
-    //                     <StyledLogo tabindex="-1">
-    //                       {isHome ? (
-    //                         <a href="/" aria-label="home">
-    //                           <IconLogo />
-    //                         </a>
-    //                       ) : (
-    //                         <Link to="/" aria-label="home">
-    //                           <IconLogo />
-    //                         </Link>
-    //                       )}
-    //                     </StyledLogo>
-    //                     {/* <StyledLanguageButton onClick={switchLanguage}>
-    //                       {language === 'en' ? '中文' : 'EN'}
-    //                     </StyledLanguageButton> */}
-    //                   </div> 
-    //                   </CSSTransition>
-    //                 )}
-      
-    //               </TransitionGroup>
-
-                  
-
-    //               <TransitionGroup component={null}>
-    //                 {isMounted && (
-    //                   <CSSTransition classNames={fadeClass} timeout={timeout}>
-    //                     <StyledHamburger onClick={this.toggleMenu}>
-    //                       <StyledHamburgerBox>
-    //                         <StyledHamburgerInner menuOpen={menuOpen} />
-    //                       </StyledHamburgerBox>
-    //                     </StyledHamburger>
-    //                   </CSSTransition>
-    //                 )}
-    //               </TransitionGroup>
-
-    //               <StyledLink>
-    //                 <StyledList>
-    //                   <TransitionGroup component={null}>
-    //                     {isMounted &&
-    //                       navLinks &&
-    //                       navLinks.map(({ url, name }, i) => (
-    //                         <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
-    //                           <StyledListItem
-    //                             key={i}
-    //                             style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
-    //                             <StyledListLink to={url}>{name}</StyledListLink>
-    //                           </StyledListItem>
-    //                         </CSSTransition>
-    //                       ))}
-    //                   </TransitionGroup>
-    //                 </StyledList>
-
-    //                 <TransitionGroup component={null}>
-    //                   {isMounted && (
-    //                     <CSSTransition classNames={fadeDownClass} timeout={timeout}>
-    //                       <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-    //                         <StyledResumeButton
-    //                           href="/resume.pdf"
-    //                           target="_blank"
-    //                           rel="nofollow noopener noreferrer">
-    //                           Resume
-    //                         </StyledResumeButton>
-    //                       </div>
-    //                     </CSSTransition>
-    //                   )}
-    //                 </TransitionGroup>
-    //               </StyledLink>
-    //             </StyledNav>
-
-    //             <Menu menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
-    //           </StyledContainer>
-    //         </>
-    //       );
-    //     }}
-    //   </LanguageContext.Consumer>
-    // );
   }
 }
 

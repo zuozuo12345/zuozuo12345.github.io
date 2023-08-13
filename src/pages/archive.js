@@ -109,7 +109,7 @@ const ArchivePage = ({ location, data }) => {
   }, []);
 
   return (
-    // <LanguageProvider>
+    <LanguageProvider>
       <Layout location={location}>
         <Helmet>
           <title>Archive | Zuo Yue</title>
@@ -188,7 +188,7 @@ const ArchivePage = ({ location, data }) => {
           </StyledTableContainer>
         </StyledMainContainer>
       </Layout>
-    // </LanguageProvider>
+    </LanguageProvider>
   );
 };
 ArchivePage.propTypes = {

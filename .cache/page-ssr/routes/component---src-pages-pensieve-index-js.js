@@ -3522,6 +3522,12 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
     const timeout = isHome ? loaderDelay : 0;
     const fadeClass = isHome ? 'fade' : '';
     const fadeDownClass = isHome ? 'fadedown' : '';
+
+    // In your Nav component, use the hook
+    const {
+      language,
+      switchLanguage
+    } = (0,_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_8__.useLanguage)();
     return (
       /*#__PURE__*/
       // <LanguageContext.Consumer>
@@ -3547,7 +3553,15 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/",
         "aria-label": "home"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButtons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('en')
+      }, "EN"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('cn')
+      }, "\u4E2D\u6587"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('de')
+      }, "Deutsch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('jp')
+      }, "\u65E5\u672C\u8A9E"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_10__["default"], {
         component: null
       }, isMounted && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_11__["default"], {
         classNames: fadeClass,
@@ -4805,53 +4819,47 @@ const PensievePage = ({
   data
 }) => {
   const posts = data.allMarkdownRemark.edges;
-  return (
-    /*#__PURE__*/
-    // <LanguageProvider>
-    react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_4__.Layout, {
-      location: location
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_2__.Helmet, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Pensieve | Zuo Yue"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
-      rel: "canonical",
-      href: "https://zuozuo12345.github.io/pensieve"
-    })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledMainContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
-      className: "big-title"
-    }, "Pensieve"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
-      className: "subtitle"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
-      href: "https://www.wizardingworld.com/writing-by-jk-rowling/pensieve",
-      target: "_blank",
-      rel: "noopener noreferrer"
-    }, "a collection of memories"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-      className: "posts"
-    }, posts.length > 0 && posts.map(({
-      node
-    }, i) => {
-      const {
-        frontmatter
-      } = node;
-      const {
-        title,
-        description,
-        slug,
-        date,
-        tags
-      } = frontmatter;
-      const d = new Date(date);
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledPost, {
-        key: i,
-        tabIndex: "0"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledPostInner, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        to: slug
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledPostHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledFolder, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_5__.IconZap, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledPostName, null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledPostDescription, null, description))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledDate, null, `${d.toLocaleDateString()}`), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledTags, null, tags.map((tag, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
-        key: i
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
-        to: `/pensieve/tags/${lodash_kebabCase__WEBPACK_IMPORTED_MODULE_3___default()(tag)}/`
-      }, "#", tag)))))));
-    })))))
-    // </LanguageProvider>
-  );
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_7__.LanguageProvider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_4__.Layout, {
+    location: location
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_2__.Helmet, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Pensieve | Zuo Yue"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {
+    rel: "canonical",
+    href: "https://zuozuo12345.github.io/pensieve"
+  })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledMainContainer, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h1", {
+    className: "big-title"
+  }, "Pensieve"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", {
+    className: "subtitle"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("a", {
+    href: "https://www.wizardingworld.com/writing-by-jk-rowling/pensieve",
+    target: "_blank",
+    rel: "noopener noreferrer"
+  }, "a collection of memories"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledGrid, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+    className: "posts"
+  }, posts.length > 0 && posts.map(({
+    node
+  }, i) => {
+    const {
+      frontmatter
+    } = node;
+    const {
+      title,
+      description,
+      slug,
+      date,
+      tags
+    } = frontmatter;
+    const d = new Date(date);
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledPost, {
+      key: i,
+      tabIndex: "0"
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledPostInner, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("header", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+      to: slug
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledPostHeader, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledFolder, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_5__.IconZap, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledPostName, null, title), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledPostDescription, null, description))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("footer", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledDate, null, `${d.toLocaleDateString()}`), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledTags, null, tags.map((tag, i) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("li", {
+      key: i
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
+      to: `/pensieve/tags/${lodash_kebabCase__WEBPACK_IMPORTED_MODULE_3___default()(tag)}/`
+    }, "#", tag)))))));
+  }))))));
 };
-
 PensievePage.propTypes = {
   location: (prop_types__WEBPACK_IMPORTED_MODULE_9___default().object).isRequired,
   data: (prop_types__WEBPACK_IMPORTED_MODULE_9___default().object).isRequired
@@ -5043,13 +5051,11 @@ const LanguageProvider = ({
     0: language,
     1: setLanguage
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('en');
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    console.log('Current language:', language);
-  }, [language]);
+  const switchLanguage = lang => setLanguage(lang);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LanguageContext.Provider, {
     value: {
       language,
-      setLanguage
+      switchLanguage
     }
   }, children);
 };

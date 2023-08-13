@@ -3522,6 +3522,12 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
     const timeout = isHome ? loaderDelay : 0;
     const fadeClass = isHome ? 'fade' : '';
     const fadeDownClass = isHome ? 'fadedown' : '';
+
+    // In your Nav component, use the hook
+    const {
+      language,
+      switchLanguage
+    } = (0,_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_8__.useLanguage)();
     return (
       /*#__PURE__*/
       // <LanguageContext.Consumer>
@@ -3547,7 +3553,15 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/",
         "aria-label": "home"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null)))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_10__["default"], {
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButtons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('en')
+      }, "EN"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('cn')
+      }, "\u4E2D\u6587"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('de')
+      }, "Deutsch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => switchLanguage('jp')
+      }, "\u65E5\u672C\u8A9E"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_10__["default"], {
         component: null
       }, isMounted && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_11__["default"], {
         classNames: fadeClass,
@@ -4783,10 +4797,7 @@ const TagsPage = ({
     }
   },
   location
-}) =>
-/*#__PURE__*/
-// <LanguageProvider>
-react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_4__.Layout, {
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_6__.LanguageProvider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_4__.Layout, {
   location: location
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_1__.Helmet, {
   title: title
@@ -4804,10 +4815,7 @@ react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_
   to: `/pensieve/tags/${lodash_kebabCase__WEBPACK_IMPORTED_MODULE_3___default()(tag.fieldValue)}/`
 }, tag.fieldValue, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("span", {
   className: "count"
-}, "(", tag.totalCount, ")")))))))
-//  {/* </LanguageProvider> */}
-;
-
+}, "(", tag.totalCount, ")"))))))));
 TagsPage.propTypes = {
   data: prop_types__WEBPACK_IMPORTED_MODULE_8___default().shape({
     allMarkdownRemark: prop_types__WEBPACK_IMPORTED_MODULE_8___default().shape({
@@ -5011,13 +5019,11 @@ const LanguageProvider = ({
     0: language,
     1: setLanguage
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('en');
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
-    console.log('Current language:', language);
-  }, [language]);
+  const switchLanguage = lang => setLanguage(lang);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(LanguageContext.Provider, {
     value: {
       language,
-      setLanguage
+      switchLanguage
     }
   }, children);
 };

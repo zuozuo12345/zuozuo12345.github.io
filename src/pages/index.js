@@ -12,6 +12,7 @@ const StyledMainContainer = styled(Main)`
 `;
 
 const IndexPage = ({ location, data }) => (
+  <LanguageProvider>
   <Layout location={location}>
     <StyledMainContainer className="fillHeight">
       <Hero data={data.hero.edges} />
@@ -21,7 +22,8 @@ const IndexPage = ({ location, data }) => (
       <Projects data={data.projects.edges} />
       <Contact data={data.contact.edges} />
     </StyledMainContainer>
-  </Layout>
+    </Layout>
+    </LanguageProvider>
 );
 
 IndexPage.propTypes = {
