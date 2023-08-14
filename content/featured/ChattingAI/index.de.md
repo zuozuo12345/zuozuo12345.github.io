@@ -4,6 +4,7 @@ title: 'ChattingAI Chrome Extension DE'
 cover: 'demo1.png'
 github: 'https://github.com/zuozuo12345/chatGPT-extension'
 external: ''
+lang: 'de'
 tech:
   - Java
   - Spring Boot

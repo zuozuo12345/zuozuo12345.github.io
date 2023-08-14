@@ -210,6 +210,7 @@ export const pageQuery = graphql`
             date
             title
             tech
+            lang
             github
             external
             company

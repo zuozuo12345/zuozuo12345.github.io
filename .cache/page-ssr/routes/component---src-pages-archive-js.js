@@ -4027,6 +4027,7 @@ const Hero = ({
     frontmatter,
     html
   } = data[0].node;
+  console.log("frontmatter", frontmatter);
   const one = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledOverline, {
     style: {
       transitionDelay: '100ms'
@@ -4791,7 +4792,7 @@ ArchivePage.propTypes = {
   data: (prop_types__WEBPACK_IMPORTED_MODULE_9___default().object).isRequired
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ArchivePage);
-const pageQuery = "301981035";
+const pageQuery = "1544481845";
 
 /***/ }),
 

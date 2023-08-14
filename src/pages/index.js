@@ -27,17 +27,21 @@ const IndexContent = ({ location, data }) => {
   console.log("language in index", language);
   console.log("data in index", data);
   const filteredHeroEdges = data.hero.edges.filter(edge => edge.node.frontmatter.lang === language);
-
+  const filteredAboutEdges = data.about.edges.filter(edge => edge.node.frontmatter.lang === language);
+  const filteredJobsEdges = data.jobs.edges.filter(edge => edge.node.frontmatter.lang === language);
+  const filteredFeaturedEdges = data.featured.edges.filter(edge => edge.node.frontmatter.lang === language);
+  const filteredProjectsEdges = data.projects.edges.filter(edge => edge.node.frontmatter.lang === language);
+  const filteredContactEdges = data.contact.edges.filter(edge => edge.node.frontmatter.lang === language);
 
   return (
     <Layout location={location}>
       <StyledMainContainer className="fillHeight">
         <Hero data={filteredHeroEdges} />
-        <About data={data.about.edges} />
-        <Jobs data={data.jobs.edges} />
-        <Featured data={data.featured.edges} />
-        <Projects data={data.projects.edges} />
-        <Contact data={data.contact.edges} />
+        <About data={filteredAboutEdges} />
+        <Jobs data={filteredJobsEdges} />
+        <Featured data={filteredFeaturedEdges} />
+        <Projects data={filteredProjectsEdges} />
+        <Contact data={filteredContactEdges} />
       </StyledMainContainer>
     </Layout>
   );
@@ -76,6 +80,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            lang
             avatar {
               childImageSharp {
                 fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
@@ -97,6 +102,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            lang
             company
             range
             url
@@ -113,6 +119,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            lang
             cover {
               childImageSharp {
                 fluid(maxWidth: 700, quality: 90, traceSVG: { color: "#64ffda" }) {
@@ -140,6 +147,7 @@ export const pageQuery = graphql`
           frontmatter {
             title
             tech
+            lang
             github
             external
           }
@@ -152,6 +160,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            lang
             buttonText
           }
           html

@@ -4,6 +4,7 @@ title: 'Sharing Spots Nearby jp'
 cover: 'demo.png'
 github: 'https://github.com/zuozuo12345/sharing-nearby-spots-v1.0'
 external: 'http://43.206.181.204:8080/'
+lang: 'jp'
 tech:
   - Java
   - Redis

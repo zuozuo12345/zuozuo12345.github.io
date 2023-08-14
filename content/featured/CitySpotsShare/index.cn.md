@@ -3,6 +3,7 @@ date: '2'
 title: 'Sharing Spots Nearby cn'
 cover: 'demo.png'
 github: 'https://github.com/zuozuo12345/sharing-nearby-spots-v1.0'
+lang: 'cn'
 external: 'http://43.206.181.204:8080/'
 tech:
   - Java

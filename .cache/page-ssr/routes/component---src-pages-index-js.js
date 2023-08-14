@@ -4027,6 +4027,7 @@ const Hero = ({
     frontmatter,
     html
   } = data[0].node;
+  console.log("frontmatter", frontmatter);
   const one = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledOverline, {
     style: {
       transitionDelay: '100ms'
@@ -4701,22 +4702,28 @@ const IndexContent = ({
   } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_3__.LanguageContext);
   console.log("language in index", language);
   console.log("data in index", data);
+  const filteredHeroEdges = data.hero.edges.filter(edge => edge.node.frontmatter.lang === language);
+  const filteredAboutEdges = data.about.edges.filter(edge => edge.node.frontmatter.lang === language);
+  const filteredJobsEdges = data.jobs.edges.filter(edge => edge.node.frontmatter.lang === language);
+  const filteredFeaturedEdges = data.featured.edges.filter(edge => edge.node.frontmatter.lang === language);
+  const filteredProjectsEdges = data.projects.edges.filter(edge => edge.node.frontmatter.lang === language);
+  const filteredContactEdges = data.contact.edges.filter(edge => edge.node.frontmatter.lang === language);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Layout, {
     location: location
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledMainContainer, {
     className: "fillHeight"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Hero, {
-    data: data.hero.edges
+    data: filteredHeroEdges
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.About, {
-    data: data.about.edges
+    data: filteredAboutEdges
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Jobs, {
-    data: data.jobs.edges
+    data: filteredJobsEdges
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Featured, {
-    data: data.featured.edges
+    data: filteredFeaturedEdges
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Projects, {
-    data: data.projects.edges
+    data: filteredProjectsEdges
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Contact, {
-    data: data.contact.edges
+    data: filteredContactEdges
   })));
 };
 IndexContent.propTypes = {
@@ -4728,7 +4735,7 @@ IndexPage.propTypes = {
   data: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().object).isRequired
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (IndexPage);
-const pageQuery = "4010407604";
+const pageQuery = "3426803019";
 
 /***/ }),
 

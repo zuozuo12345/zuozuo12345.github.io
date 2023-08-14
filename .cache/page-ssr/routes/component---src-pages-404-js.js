@@ -4027,6 +4027,7 @@ const Hero = ({
     frontmatter,
     html
   } = data[0].node;
+  console.log("frontmatter", frontmatter);
   const one = () => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledOverline, {
     style: {
       transitionDelay: '100ms'
