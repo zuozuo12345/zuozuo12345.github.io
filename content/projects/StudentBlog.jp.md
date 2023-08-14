@@ -3,6 +3,7 @@ date: '2022-04-16'
 title: 'Student Blog  jp'
 github: 'https://github.com/zuozuo12345/my-blo'
 external: ''
+lang: 'jp'
 tech:
   - Next.js
   - TypeScript

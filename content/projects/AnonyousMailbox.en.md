@@ -3,6 +3,7 @@ date: '2022-03-16'
 title: 'Anonymous Question Box Web Application en'
 github: 'https://github.com/zuozuo12345/anony-question-box'
 external: ''
+lang: 'en'
 tech:
   - GraphQL
   - MongoDB

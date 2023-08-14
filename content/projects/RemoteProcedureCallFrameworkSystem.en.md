@@ -3,6 +3,7 @@ date: '2022-09-16'
 title: 'Remote Procedure Call Framework System en'
 github: 'https://github.com/zuozuo12345/rpc-framwork'
 external: ''
+lang: 'en'
 tech:
   - Netty
   - Zookeeper

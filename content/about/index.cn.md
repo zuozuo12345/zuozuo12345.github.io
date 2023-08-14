@@ -1,7 +1,7 @@
 ---
 title: 'About Me cn'
 avatar: 'me.jpg'
-slug: "/about/cn/"
+lang: 'cn'
 skills:
   - Python
   - TypeScript

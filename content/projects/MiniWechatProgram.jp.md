@@ -3,6 +3,7 @@ date: '2022-09-16'
 title: 'TikTok Miniprogram: Running Route Planning and Sharing jp'
 github: 'https://github.com/zuozuo12345/daily-running'
 external: ''
+lang: 'jp'
 tech:
   - Java
   - Spring Boot

@@ -1,7 +1,7 @@
 ---
 title: 'About Me jp'
 avatar: 'me.jpg'
-slug: "/about/jp/"
+lang: 'jp'
 skills:
   - Python
   - TypeScript

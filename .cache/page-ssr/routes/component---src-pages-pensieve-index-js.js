@@ -4729,6 +4729,7 @@ const PensievePage = ({
   data
 }) => {
   const posts = data.allMarkdownRemark.edges;
+  console.log("data in pen", data);
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_7__.LanguageProvider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_4__.Layout, {
     location: location
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_2__.Helmet, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("title", null, "Pensieve | Zuo Yue"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("link", {

@@ -7,50 +7,70 @@ import { Main } from '@styles';
 import { useLanguage,LanguageProvider, LanguageContext } from '@styles/LanguageContext'; 
 
 
+
 const StyledMainContainer = styled(Main)`
   counter-reset: section;
 `;
 
+
+
 const IndexPage = ({ location, data }) => {
-  console.log("data in indes",data)
-  return(
-  <LanguageProvider>
+  return (
+    <LanguageProvider>
+      <IndexContent location={location} data={data} />
+    </LanguageProvider>
+  );
+};
+
+const IndexContent = ({ location, data }) => {
+  const { language } = useContext(LanguageContext);
+  console.log("language in index", language);
+  console.log("data in index", data);
+  const filteredHeroEdges = data.hero.edges.filter(edge => edge.node.frontmatter.lang === language);
+
+
+  return (
     <Layout location={location}>
       <StyledMainContainer className="fillHeight">
-        <Hero data={data.hero.edges} />
+        <Hero data={filteredHeroEdges} />
         <About data={data.about.edges} />
         <Jobs data={data.jobs.edges} />
         <Featured data={data.featured.edges} />
         <Projects data={data.projects.edges} />
         <Contact data={data.contact.edges} />
       </StyledMainContainer>
-      </Layout>
-   </LanguageProvider>
-    )
+    </Layout>
+  );
+};
+
+IndexContent.propTypes = {
+  location: PropTypes.object.isRequired,
+  data: PropTypes.object.isRequired,
 };
 
 IndexPage.propTypes = {
   location: PropTypes.object.isRequired,
-  data: PropTypes.object.isRequired,    
+  data: PropTypes.object.isRequired,
 };
 
 export default IndexPage;
 
 export const pageQuery = graphql`
-  {
-    hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
-      edges {
-        node {
-          frontmatter {
-            title
-            name
-            subtitle
-            buttonText
-          }
-          html
+{
+  hero: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/hero/" } }) {
+    edges {
+      node {
+        frontmatter {
+          title
+          name
+          lang
+          subtitle
+          buttonText
         }
+        html
       }
     }
+  }
     about: allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
       edges {
         node {

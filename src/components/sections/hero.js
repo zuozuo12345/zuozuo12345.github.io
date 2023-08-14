@@ -65,6 +65,7 @@ const Hero = ({ data }) => {
   }, []);
 
   const { frontmatter, html } = data[0].node;
+  console.log("frontmatter",frontmatter)
 
   const one = () => (
     <StyledOverline style={{ transitionDelay: '100ms' }}>{frontmatter.title}</StyledOverline>

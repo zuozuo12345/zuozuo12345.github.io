@@ -4686,23 +4686,43 @@ const StyledMainContainer = (0,styled_components__WEBPACK_IMPORTED_MODULE_4__["d
 const IndexPage = ({
   location,
   data
-}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_3__.LanguageProvider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Layout, {
-  location: location
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledMainContainer, {
-  className: "fillHeight"
-}, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Hero, {
-  data: data.hero.edges
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.About, {
-  data: data.about.edges
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Jobs, {
-  data: data.jobs.edges
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Featured, {
-  data: data.featured.edges
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Projects, {
-  data: data.projects.edges
-}), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Contact, {
-  data: data.contact.edges
-}))));
+}) => {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_3__.LanguageProvider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(IndexContent, {
+    location: location,
+    data: data
+  }));
+};
+const IndexContent = ({
+  location,
+  data
+}) => {
+  const {
+    language
+  } = (0,react__WEBPACK_IMPORTED_MODULE_0__.useContext)(_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_3__.LanguageContext);
+  console.log("language in index", language);
+  console.log("data in index", data);
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Layout, {
+    location: location
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledMainContainer, {
+    className: "fillHeight"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Hero, {
+    data: data.hero.edges
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.About, {
+    data: data.about.edges
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Jobs, {
+    data: data.jobs.edges
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Featured, {
+    data: data.featured.edges
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Projects, {
+    data: data.projects.edges
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Contact, {
+    data: data.contact.edges
+  })));
+};
+IndexContent.propTypes = {
+  location: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().object).isRequired,
+  data: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().object).isRequired
+};
 IndexPage.propTypes = {
   location: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().object).isRequired,
   data: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().object).isRequired

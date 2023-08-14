@@ -1,7 +1,7 @@
 ---
 title: 'About Me de'
 avatar: 'me.jpg'
-slug: "/about/de/"
+lang: 'de'
 skills:
   - Python
   - TypeScript

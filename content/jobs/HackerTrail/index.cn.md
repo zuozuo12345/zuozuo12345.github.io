@@ -2,6 +2,7 @@
 date: '2023-05-15'
 title: 'Software Developer cn'
 company: 'HackerTrail'
+lang: 'cn'
 range: 'May 2023 - Present'
 url: 'https://www.hackertrail.com/'
 ---
