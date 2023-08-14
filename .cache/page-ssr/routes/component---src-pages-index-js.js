@@ -3522,16 +3522,11 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
     const timeout = isHome ? loaderDelay : 0;
     const fadeClass = isHome ? 'fade' : '';
     const fadeDownClass = isHome ? 'fadedown' : '';
-
-    // In your Nav component, use the hook
-    const {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_8__.LanguageContext.Consumer, null, ({
       language,
       switchLanguage
-    } = (0,_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_8__.useLanguage)();
-    return (
-      /*#__PURE__*/
-      // <LanguageContext.Consumer>
-      react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledContainer, {
+    }) => {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement((react__WEBPACK_IMPORTED_MODULE_0___default().Fragment), null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledContainer, {
         scrollDirection: scrollDirection
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_helmet__WEBPACK_IMPORTED_MODULE_2__["default"], null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement("body", {
         className: menuOpen ? 'blur' : ''
@@ -3553,15 +3548,27 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null)) : /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(gatsby__WEBPACK_IMPORTED_MODULE_1__.Link, {
         to: "/",
         "aria-label": "home"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButtons, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
-        onClick: () => switchLanguage('en')
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components_icons__WEBPACK_IMPORTED_MODULE_6__.IconLogo, null))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
+        onClick: () => {
+          switchLanguage('en');
+          console.log("language", language);
+        }
       }, "EN"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
-        onClick: () => switchLanguage('cn')
+        onClick: () => {
+          switchLanguage('cn');
+          console.log("language", language);
+        }
       }, "\u4E2D\u6587"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
-        onClick: () => switchLanguage('de')
+        onClick: () => {
+          switchLanguage('de');
+          console.log("language", language);
+        }
       }, "Deutsch"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledLanguageButton, {
-        onClick: () => switchLanguage('jp')
-      }, "\u65E5\u672C\u8A9E"))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_10__["default"], {
+        onClick: () => {
+          switchLanguage('jp');
+          console.log("language", language);
+        }
+      }, "\u65E5\u8A9E")))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_10__["default"], {
         component: null
       }, isMounted && /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_transition_group__WEBPACK_IMPORTED_MODULE_11__["default"], {
         classNames: fadeClass,
@@ -3602,107 +3609,10 @@ class Nav extends react__WEBPACK_IMPORTED_MODULE_0__.Component {
       }, "Resume")))))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_5__.Menu, {
         menuOpen: menuOpen,
         toggleMenu: this.toggleMenu
-      }))
-
-      // </LanguageContext.Consumer>
-    );
-
-    // return (
-    //   <LanguageContext.Consumer>
-    //     {({ language, setLanguage }) => {
-
-    //       const switchLanguage = () => {
-    //         setLanguage(language === 'en' ? 'cn' : 'en');
-    //         console.log("language in nav",language)
-    //       };
-
-    //       return (
-    //         <>
-    //           <StyledContainer scrollDirection={scrollDirection}>
-    //             <Helmet>
-    //               <body className={menuOpen ? 'blur' : ''} />
-    //             </Helmet>
-    //             <StyledNav>
-    //               <TransitionGroup component={null}>
-    //                 {isMounted && (
-    //                   <CSSTransition classNames={fadeClass} timeout={timeout}>
-    //                     <div style={{ display: 'flex', alignItems: 'center' }}> 
-    //                     <StyledLogo tabindex="-1">
-    //                       {isHome ? (
-    //                         <a href="/" aria-label="home">
-    //                           <IconLogo />
-    //                         </a>
-    //                       ) : (
-    //                         <Link to="/" aria-label="home">
-    //                           <IconLogo />
-    //                         </Link>
-    //                       )}
-    //                     </StyledLogo>
-    //                     {/* <StyledLanguageButton onClick={switchLanguage}>
-    //                       {language === 'en' ? '中文' : 'EN'}
-    //                     </StyledLanguageButton> */}
-    //                   </div> 
-    //                   </CSSTransition>
-    //                 )}
-
-    //               </TransitionGroup>
-
-    //               <TransitionGroup component={null}>
-    //                 {isMounted && (
-    //                   <CSSTransition classNames={fadeClass} timeout={timeout}>
-    //                     <StyledHamburger onClick={this.toggleMenu}>
-    //                       <StyledHamburgerBox>
-    //                         <StyledHamburgerInner menuOpen={menuOpen} />
-    //                       </StyledHamburgerBox>
-    //                     </StyledHamburger>
-    //                   </CSSTransition>
-    //                 )}
-    //               </TransitionGroup>
-
-    //               <StyledLink>
-    //                 <StyledList>
-    //                   <TransitionGroup component={null}>
-    //                     {isMounted &&
-    //                       navLinks &&
-    //                       navLinks.map(({ url, name }, i) => (
-    //                         <CSSTransition key={i} classNames={fadeDownClass} timeout={timeout}>
-    //                           <StyledListItem
-    //                             key={i}
-    //                             style={{ transitionDelay: `${isHome ? i * 100 : 0}ms` }}>
-    //                             <StyledListLink to={url}>{name}</StyledListLink>
-    //                           </StyledListItem>
-    //                         </CSSTransition>
-    //                       ))}
-    //                   </TransitionGroup>
-    //                 </StyledList>
-
-    //                 <TransitionGroup component={null}>
-    //                   {isMounted && (
-    //                     <CSSTransition classNames={fadeDownClass} timeout={timeout}>
-    //                       <div style={{ transitionDelay: `${isHome ? navLinks.length * 100 : 0}ms` }}>
-    //                         <StyledResumeButton
-    //                           href="/resume.pdf"
-    //                           target="_blank"
-    //                           rel="nofollow noopener noreferrer">
-    //                           Resume
-    //                         </StyledResumeButton>
-    //                       </div>
-    //                     </CSSTransition>
-    //                   )}
-    //                 </TransitionGroup>
-    //               </StyledLink>
-    //             </StyledNav>
-
-    //             <Menu menuOpen={menuOpen} toggleMenu={this.toggleMenu} />
-    //           </StyledContainer>
-    //         </>
-    //       );
-    //     }}
-    //   </LanguageContext.Consumer>
-    // );
+      })));
+    });
   }
 }
-
 Nav.propTypes = {
   isHome: (prop_types__WEBPACK_IMPORTED_MODULE_12___default().bool)
 };
@@ -4776,7 +4686,7 @@ const StyledMainContainer = (0,styled_components__WEBPACK_IMPORTED_MODULE_4__["d
 const IndexPage = ({
   location,
   data
-}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Layout, {
+}) => /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_styles_LanguageContext__WEBPACK_IMPORTED_MODULE_3__.LanguageProvider, null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Layout, {
   location: location
 }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(StyledMainContainer, {
   className: "fillHeight"
@@ -4792,7 +4702,7 @@ const IndexPage = ({
   data: data.projects.edges
 }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_components__WEBPACK_IMPORTED_MODULE_1__.Contact, {
   data: data.contact.edges
-})));
+}))));
 IndexPage.propTypes = {
   location: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().object).isRequired,
   data: (prop_types__WEBPACK_IMPORTED_MODULE_5___default().object).isRequired

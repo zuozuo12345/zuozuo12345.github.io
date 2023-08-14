@@ -87,16 +87,33 @@ PostTemplate.propTypes = {
 };
 
 export const pageQuery = graphql`
-  query ($path: String!) {
-    markdownRemark(frontmatter: { slug: { eq: $path } }) {
-      html
+  query PostBySlugAndLanguage($slug: String!, $language: String!) {
+    markdownRemark(
+      frontmatter: { slug: { eq: $slug } }
+      fileAbsolutePath: { regex: $language }
+    ) {
       frontmatter {
         title
-        description
         date
-        slug
         tags
       }
+      html
     }
   }
 `;
+
+
+// export const pageQuery = graphql`
+//   query ($path: String!) {
+//     markdownRemark(frontmatter: { slug: { eq: $path } }) {
+//       html
+//       frontmatter {
+//         title
+//         description
+//         date
+//         slug
+//         tags
+//       }
+//     }
+//   }
+// `;
