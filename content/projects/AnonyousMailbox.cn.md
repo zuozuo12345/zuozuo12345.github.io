@@ -1,6 +1,6 @@
 ---
 date: '2022-03-16'
-title: 'Anonymous Question Box Web Application cn'
+title: '匿名提问箱应用'
 github: 'https://github.com/zuozuo12345/anony-question-box'
 external: ''
 lang: 'cn'
@@ -14,4 +14,4 @@ tech:
 company: ''
 showInProjects: true
 ---
-Repository dedicated to my #Anonymous Question Box Web Application
+用于我的 #Anonymous Question Box Web 应用程序的存储库

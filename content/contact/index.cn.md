@@ -1,6 +1,6 @@
 ---
-title: 'Get In Touch'
+title: '联系我'
 lang: 'cn'
-buttonText: 'Mail Me cn'
+buttonText: '邮箱联系'
 ---
-My inbox is always open. Whether you have a question or just want to say hello, I'll try my best to get back to you! Feel free to mail me about any relevant job updates.
+我的收件箱始终欢迎您的来信。无论您有任何问题，或者只是想打个招呼，我都会尽快回复您。如果有任何相关的工作更新或相关咨询，欢迎随时发邮件。

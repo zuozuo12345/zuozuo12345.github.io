@@ -1,5 +1,5 @@
 ---
-title: 'About Me jp'
+title: '個人プロフィール'
 avatar: 'me.jpg'
 lang: 'jp'
 skills:
@@ -14,8 +14,9 @@ skills:
   - JUnit & TestNG
   - MySQL & PostgreSQL & MongoDB
 ---
-Hello! Interestingly, I got introduced to programming in my freshman year at [Tsinghua University, Beijing, China](https://www.tsinghua.edu.cn/en/), where I graduated in the Top 10% of my class with a Bachelor's Degree. Currently, I'm pursuing Master of Computer degree (2022-2024)  at [National University of Singapore, Singapore](https://www.nus.edu.sg/).
 
-I'm currently working as a developer for **HackerTrail** in the Scout branch. My responsibilty includes TypeScript/Python based on front-end,  microservices development & testing.
+こんにちは！私は[清華大学](https://www.tsinghua.edu.cn/en/)の一年生の時に初めてプログラミングに触れ、クラスのトップ10％の成績で学士号を取得しました。現在、[シンガポール国立大学](https://www.nus.edu.sg/)でコンピュータ科学の修士号（2022年7月-2024年7月）を取得しています。
 
-Here is a list of the technologies that I'm familiar with!
+現在、**HackerTrail**のScout製品で開発者として働いています。私の職務は、フロントエンド技術に基づくTypeScript/Python開発、およびマイクロサービスの開発とテストを含みます。
+
+以下は、私が熟知している技術のリストです：

@@ -1,6 +1,6 @@
 ---
 date: '2022-03-16'
-title: 'Anonymous Question Box Web Application de'
+title: 'Anonyme Fragebox-Webanwendung'
 github: 'https://github.com/zuozuo12345/anony-question-box'
 external: ''
 lang: 'de'
@@ -14,4 +14,4 @@ tech:
 company: ''
 showInProjects: true
 ---
-Repository dedicated to my #Anonymous Question Box Web Application
+Repository für meine #Anonymous Question Box-WebanwendungRepository dedicated to my #Anonymous Question Box Web Applicati

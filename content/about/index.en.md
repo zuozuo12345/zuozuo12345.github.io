@@ -1,5 +1,5 @@
 ---
-title: 'About Me EN'
+title: 'About Me'
 avatar: 'me.jpg'
 lang: 'en'
 skills:

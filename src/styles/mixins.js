@@ -36,6 +36,8 @@ const mixins = {
     }
   `,
 
+  
+
   inlineLink: css`
     display: inline-block;
     text-decoration: none;
@@ -69,6 +71,32 @@ const mixins = {
       opacity: 0.5;
     }
   `,
+
+
+  selector: css`
+  border: 1px solid ${colors.grey};
+  background-color: ${colors.white};
+  padding: 5px;
+  margin: 0 10px;
+  font-size: ${fontSizes.sm};
+  transition: ${theme.transition};
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    border-color: ${colors.green};
+  }
+  &:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    position: relative;
+    bottom: 0.37em;
+    background-color: ${colors.green};
+    transition: ${theme.transition};
+    opacity: 0.5;
+  }
+`,
 
   smallButton: css`
     color: ${colors.green};

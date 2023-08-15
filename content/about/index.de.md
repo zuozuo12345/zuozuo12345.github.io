@@ -1,5 +1,5 @@
 ---
-title: 'About Me de'
+title: 'über mich'
 avatar: 'me.jpg'
 lang: 'de'
 skills:
@@ -14,8 +14,9 @@ skills:
   - JUnit & TestNG
   - MySQL & PostgreSQL & MongoDB
 ---
-Hello! Interestingly, I got introduced to programming in my freshman year at [Tsinghua University, Beijing, China](https://www.tsinghua.edu.cn/en/), where I graduated in the Top 10% of my class with a Bachelor's Degree. Currently, I'm pursuing Master of Computer degree (2022-2024)  at [National University of Singapore, Singapore](https://www.nus.edu.sg/).
 
-I'm currently working as a developer for **HackerTrail** in the Scout branch. My responsibilty includes TypeScript/Python based on front-end,  microservices development & testing.
+Hallo! Ich kam im ersten Studienjahr an der [Tsinghua Universität](https://www.tsinghua.edu.cn/en/) erstmals mit der Programmierung in Berührung und schloss meinen Bachelor-Abschluss unter den besten 10% meiner Klasse ab. Derzeit verfolge ich einen Master-Abschluss in Informatik (Juli 2022 - Juli 2024) an der [National University of Singapore, Singapur](https://www.nus.edu.sg/).
 
-Here is a list of the technologies that I'm familiar with!
+Zur Zeit arbeite ich als Entwickler für das Scout-Produkt bei  **HackerTrail** . Zu meinen Aufgaben gehören die Entwicklung in TypeScript/Python basierend auf Front-End-Technologien sowie die Entwicklung und das Testen von Mikroservices.
+
+Hier ist eine Liste der Technologien, mit denen ich vertraut bin:

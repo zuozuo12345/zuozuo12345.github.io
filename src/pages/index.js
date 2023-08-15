@@ -24,8 +24,7 @@ const IndexPage = ({ location, data }) => {
 
 const IndexContent = ({ location, data }) => {
   const { language } = useContext(LanguageContext);
-  console.log("language in index", language);
-  console.log("data in index", data);
+
   const filteredHeroEdges = data.hero.edges.filter(edge => edge.node.frontmatter.lang === language);
   const filteredAboutEdges = data.about.edges.filter(edge => edge.node.frontmatter.lang === language);
   const filteredJobsEdges = data.jobs.edges.filter(edge => edge.node.frontmatter.lang === language);

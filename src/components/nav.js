@@ -167,6 +167,13 @@ const StyledLanguageButton = styled.a`
   font-size: ${fontSizes.smish};
 `;
 
+const StyledLanguageSelector = styled.select`
+  ${mixins.smallButton};
+  appearance: none; 
+  margin-left: 40px;
+`
+
+
 
 const DELTA = 5;
 
@@ -274,24 +281,20 @@ class Nav extends Component {
                             </Link>
                           )}
                         </StyledLogo>
-                          <StyledLanguageButton onClick={() => {
-                            switchLanguage('en');
-                            console.log("language", language)
-                          }
-                          }>EN</StyledLanguageButton>
-                          <StyledLanguageButton onClick={() => {
-                            switchLanguage('cn');
-                            console.log("language", language)
-                          }}>中文</StyledLanguageButton>
-                          <StyledLanguageButton onClick={() => {
-                            switchLanguage('de');
-                            console.log("language", language)
-                          }}>Deutsch</StyledLanguageButton>
-                          <StyledLanguageButton onClick={() => {
-                            switchLanguage('jp');
-                            console.log("language", language)
-                          }
-                      }>日語</StyledLanguageButton>
+         
+                        <StyledLanguageSelector
+                          value={language}
+                          onChange={e => {
+                            switchLanguage(e.target.value);
+        
+                          }}
+                        >
+                          <option value="en">English</option>
+                          <option value="cn">中文</option>
+                          <option value="de">Deutsch</option>
+                          <option value="jp">日語</option>
+                        </StyledLanguageSelector>
+
 
                       </div> 
                       </CSSTransition>

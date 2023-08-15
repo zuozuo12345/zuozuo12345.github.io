@@ -1,6 +1,6 @@
 ---
-title: 'Get In Touch'
+title: '連絡してくださ'
 lang: 'jp'
-buttonText: 'Mail Me jp'
+buttonText: 'メールでの連絡'
 ---
-My inbox is always open. Whether you have a question or just want to say hello, I'll try my best to get back to you! Feel free to mail me about any relevant job updates.
+私の受信箱はいつでも開いています。質問がある場合、またはただ挨拶したいだけの場合でも、できるだけ早く返信するよう努めます。関連する求人情報やその他のお問い合わせがあれば、お気軽にメールしてください。

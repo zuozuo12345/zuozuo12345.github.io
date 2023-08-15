@@ -1,6 +1,6 @@
 ---
-title: 'Get In Touch'
+title: 'In Kontakt treten'
 lang: 'de'
-buttonText: 'Mail Me de'
+buttonText: 'E-Mail-Kontakt'
 ---
-My inbox is always open. Whether you have a question or just want to say hello, I'll try my best to get back to you! Feel free to mail me about any relevant job updates.
+Mein Posteingang ist immer für Ihre Nachrichten offen. Egal ob Sie eine Frage haben oder einfach nur hallo sagen möchten, ich werde mein Bestes tun, um Ihnen so schnell wie möglich zu antworten. Falls es irgendwelche relevanten Job-Updates oder entsprechende Anfragen gibt, zögern Sie nicht, mir eine E-Mail zu schicken.

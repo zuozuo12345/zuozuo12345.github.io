@@ -121,7 +121,7 @@ const StyledTags = styled.ul`
 
 const PensievePage = ({ location, data }) => {
   const posts = data.allMarkdownRemark.edges;
-  console.log("data in pen",data)
+
 
   return (
     <LanguageProvider>
