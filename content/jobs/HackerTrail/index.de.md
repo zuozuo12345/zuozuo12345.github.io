@@ -1,14 +1,14 @@
 ---
 date: '2023-05-15'
-title: 'Software Developer de'
+title: 'Softwareentwickler Praktikant'
 company: 'HackerTrail'
 lang: 'de'
 range: 'May 2023 - Present'
 url: 'https://www.hackertrail.com/'
 ---
-* Optimize a profile searching and recommending system for both web applications and Chrome Extension, leveraging  **TypeScript** ,  **Python** ,  **Fast API** , **Celery** and  **Next.js** , enhancing recruiter’s hiring efficiency.
-* Diagnosed and remedied data anomalies by a 1% reduction in discrepancies with enhancing **SQL Alchemy** session handling and optimizing **PostgreSQL** operations in  **microservice system** . Implemented rollback for data consistency.
-* Slashed loading delays by 20% by transiting from **Polling** to **Server-Sent Events (SSE)** and incorporating  **lazy-loading** .
-* Created a custom email module with automated dispatches and third-party API integration. Ensured **responsive designs** for multi-device compatibility.
-* Reduced potential bugs by automating unit/integration tests and **CI/CD** scripts.
-* Mastered the complete project deployment on the cloud via **AWS**  **LightSail** , orchestrated **PostgreSQL** using  **AWS RDS** , and amplified search and monitor capabilities with  **AWS Elastic Search** , showcasing deep cloud integration expertise.
+* Optimierte ein Profilsuch- und Empfehlungssystem für Webanwendungen und Chrome-Erweiterung, unter Verwendung von TypeScript, Python, Fast API, Celery und Next.js, um die Einstellungseffizienz der Recruiter zu erhöhen.
+* Diagnostizierte und behebte Datenanomalien durch eine 1%ige Reduzierung der Abweichungen, indem die SQL Alchemy-Sitzungsverwaltung verbessert und PostgreSQL-Operationen in einem Microservice-System optimiert wurden. Implementierte Rollback für Datenkonsistenz.
+* Reduzierte Ladeverzögerungen um 20%, indem von Polling auf Server-Sent Events (SSE) umgestellt und Lazy-Loading integriert wurde.
+* Erstellte ein benutzerdefiniertes E-Mail-Modul mit automatisierten Versandmöglichkeiten und Integration von Drittanbieter-APIs. Sorgte für responsive Designs für die Kompatibilität mit mehreren Geräten.
+* Reduzierte potenzielle Fehler durch Automatisierung von Unit-/Integrationstests und CI/CD-Skripten.
+* Beherrschte die vollständige Projektbereitstellung in der Cloud über AWS LightSail, orchestrierte PostgreSQL mit AWS RDS und erweiterte die Such- und Überwachungsfunktionen mit AWS Elastic Search, was eine tiefe Expertise in der Cloud-Integration zeigt.

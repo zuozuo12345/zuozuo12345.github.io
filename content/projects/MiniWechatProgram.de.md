@@ -1,6 +1,6 @@
 ---
 date: '2022-09-16'
-title: 'TikTok Miniprogram: Running Route Planning and Sharing de'
+title: 'TikTok-Miniprogramm: Planung und Teilen von Laufstrecken'
 github: 'https://github.com/zuozuo12345/daily-running'
 external: ''
 lang: 'de'
@@ -16,4 +16,4 @@ tech:
 company: ''
 showInProjects: true
 ---
-Repository dedicated to my #TikTok Miniprogram: Running Route Planning and Sharing
+Repository, das meinem #TikTok-Miniprogramm gewidmet ist: Planung und Teilen von Laufstrecken.

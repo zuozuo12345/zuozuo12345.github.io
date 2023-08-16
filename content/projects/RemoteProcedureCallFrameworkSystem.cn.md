@@ -1,6 +1,6 @@
 ---
 date: '2022-09-16'
-title: 'Remote Procedure Call Framework System cn'
+title: 'Remote Procedure Call Framework System'
 github: 'https://github.com/zuozuo12345/rpc-framwork'
 external: ''
 lang: 'cn'
@@ -12,4 +12,4 @@ tech:
 company: ''
 showInProjects: true
 ---
-Repository dedicated to my #Remote Procedure Call Framework System
+这个仓库用于我的 #Remote Procedure Call Framework System

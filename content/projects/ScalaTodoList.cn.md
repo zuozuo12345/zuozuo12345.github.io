@@ -1,6 +1,6 @@
 ---
 date: '2022-11-16'
-title: 'Scala Todo List cn'
+title: 'Scala 完成清单'
 github: 'https://github.com/zuozuo12345/scala-todo-list'
 external: ''
 lang: 'cn'
@@ -14,4 +14,4 @@ tech:
 company: ''
 showInProjects: true
 ---
-Repository dedicated to my #Scala Todo List
+这个仓库用于我的 #Scala Todo List

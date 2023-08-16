@@ -1,6 +1,6 @@
 ---
 date: '1'
-title: 'ChattingAI Chrome Extension DE'
+title: 'ChattingAI Chrome-Erweiterung'
 cover: 'demo1.png'
 github: 'https://github.com/zuozuo12345/chatGPT-extension'
 external: ''
@@ -17,4 +17,4 @@ tech:
 
 showInProjects: true
 ---
-Designed an AI chatbot based on Chrome Extension with a floating dialogue window by using Spring Boot, Redis and **MySQL** for enhanced functionality. Integrated with  **Open AI APIs** with prompt to provide user-defined interactions, such as text adventure games, tarot divination and psychological counseling. Incorporated a robust framework using **Pinecone** and offered **ChatGPT** multi-model selection options for a more tailored user experience.
+Entwarf einen KI-Chatbot als Chrome-Erweiterung, der ein schwebendes Dialogfenster aufweist und unter Verwendung von **Spring Boot**, **Redis** und **MySQL** für erweiterte Funktionalität. Integriert mit **OpenAI APIs** und Aufforderungen, um benutzerdefinierte Interaktionen zu ermöglichen, einschließlich Textabenteuerspielen, Tarot-Wahrsagerei und psychologischer Beratung. Ein robustes Framework mit **Pinecone** wurde integriert und **ChatGPT** Multi-Modell-Auswahloptionen angeboten, um ein individuelleres Benutzererlebnis zu schaffen.

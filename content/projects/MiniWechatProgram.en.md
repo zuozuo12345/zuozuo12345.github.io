@@ -1,6 +1,6 @@
 ---
 date: '2022-09-16'
-title: 'TikTok Miniprogram: Running Route Planning and Sharing en'
+title: 'TikTok Miniprogram: Running Route Planning and Sharing'
 github: 'https://github.com/zuozuo12345/daily-running'
 external: ''
 lang: 'en'

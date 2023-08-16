@@ -1,6 +1,6 @@
 ---
 date: '2'
-title: 'Sharing Spots Nearby de'
+title: 'Teilen von Orten in der Nähe'
 cover: 'demo.png'
 github: 'https://github.com/zuozuo12345/sharing-nearby-spots-v1.0'
 external: 'http://43.206.181.204:8080/'
@@ -15,4 +15,4 @@ tech:
   - AWS
 showInProjects: true
 ---
-Developed a social-driven web application for local spot recommendations and reviews in **Java** with  **JavaScript** ,  **Spring Boot**, **MyBatis**, **MySQL** , **Redis** and  **Vue.js** .
+Entwickelte eine sozial orientierte Webanwendung für Empfehlungen und Bewertungen lokaler Orte in  **Java** ,  **JavaScript** ,  **Spring Boot** ,  **MyBatis** ,  **MySQL** , **Redis** und  **Vue.js** . Mit  **Spring Boot** ,  **MyBatis** ,  **MySQL** , **Redis** und **Vue.js** wurde eine Informationsaustauschplattform für städtische Dienstleistungen geschaffen, die Empfehlungen und Bewertungen von Orten bereitstellt und den Benutzern hilft, ein qualitativ hochwertigeres Leben zu entdecken.

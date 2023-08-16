@@ -1,6 +1,6 @@
 ---
 date: '2022-11-16'
-title: 'Scala Todo List jp'
+title: 'スカラ トゥドゥリス'
 github: 'https://github.com/zuozuo12345/scala-todo-list'
 external: ''
 lang: 'jp'
@@ -14,4 +14,4 @@ tech:
 company: ''
 showInProjects: true
 ---
-Repository dedicated to my #Scala Todo List
+私の#スカラ トゥドゥリストに専念したリポジトリ

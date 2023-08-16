@@ -1,7 +1,7 @@
 ---
 date: '2022-04-16'
-title: 'Student Blog  jp'
-github: 'https://github.com/zuozuo12345/my-blo'
+title: '学生ブログ'
+github: 'https://github.com/zuozuo12345/my-blog'
 external: ''
 lang: 'jp'
 tech:
@@ -14,4 +14,4 @@ tech:
 company: ''
 showInProjects: true
 ---
-Repository dedicated to my #Remote Procedure Call Framework System
+私の#学生ブログに専念したリポジトリ

@@ -1,7 +1,7 @@
 ---
 date: '2022-04-16'
-title: 'Student Blog cn'
-github: 'https://github.com/zuozuo12345/my-blo'
+title: '学生博客'
+github: 'https://github.com/zuozuo12345/my-blog'
 external: ''
 lang: 'cn'
 tech:
@@ -14,4 +14,4 @@ tech:
 company: ''
 showInProjects: true
 ---
-Repository dedicated to my #Remote Procedure Call Framework System
+这个仓库用于我的 #Student Blog

@@ -1,6 +1,6 @@
 ---
 date: '2022-02-16'
-title: 'Kafka Stream Learning cn'
+title: 'Kafka流式计算学习'
 github: 'https://github.com/zuozuo12345/kafka-stream-learning'
 external: ''
 lang: 'cn'
@@ -10,8 +10,7 @@ tech:
   - PostgreSQL
 
 
-
 company: ''
 showInProjects: true
 ---
-Repository dedicated to my #Kafka Stream Learning
+仓库用于我的 #Kafka Stream Learning

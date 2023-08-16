@@ -1,6 +1,6 @@
 ---
 date: '2023-05-15'
-title: 'Software Developer en'
+title: 'Software Developer'
 company: 'HackerTrail'
 lang: 'en'
 range: 'May 2023 - Present'

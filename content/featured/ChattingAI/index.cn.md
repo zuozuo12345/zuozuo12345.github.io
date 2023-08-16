@@ -1,10 +1,10 @@
 ---
 date: '1'
-title: 'ChattingAI Chrome Extension cn'
+title: 'ChattingAI Chrome扩展插件'
 cover: 'demo1.png'
 github: 'https://github.com/zuozuo12345/chatGPT-extension'
 external: ''
-
+lang: 'cn'
 tech:
   - Java
   - Spring Boot
@@ -14,7 +14,6 @@ tech:
   - MySQL
   - Pinecone
   - React.js
-
 showInProjects: true
 ---
-Designed an AI chatbot based on Chrome Extension with a floating dialogue window by using Spring Boot, Redis and **MySQL** for enhanced functionality. Integrated with  **Open AI APIs** with prompt to provide user-defined interactions, such as text adventure games, tarot divination and psychological counseling. Incorporated a robust framework using **Pinecone** and offered **ChatGPT** multi-model selection options for a more tailored user experience.
+接入OpenAI APIs，开发基于Chrome浏览器的AI聊天机器人对话悬浮窗口插件。使用Spring Boot + Redis + MySQL + Pinecone框架。使用prompt提供文字冒险游戏等特定交互功能，并加入ChatGPT多模型选择。

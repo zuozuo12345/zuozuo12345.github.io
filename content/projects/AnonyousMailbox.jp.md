@@ -1,6 +1,6 @@
 ---
 date: '2022-03-16'
-title: 'Anonymous Question Box Web Application jp'
+title: '匿名質問箱ウェブアプリケーション'
 github: 'https://github.com/zuozuo12345/anony-question-box'
 external: ''
 lang: 'jp'
@@ -14,4 +14,4 @@ tech:
 company: ''
 showInProjects: true
 ---
-Repository dedicated to my #Anonymous Question Box Web Application
+私の＃匿名質問箱ウェブアプリケーションに専用のリポジトリ
